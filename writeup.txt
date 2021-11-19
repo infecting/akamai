@@ -1,0 +1,71 @@
+1. _ac array contains basic values for obfuscation
+2. Important functions
+    A. bmak.gd()
+        i. returns the first portion of the _abck cookie
+        ii. Function calls
+            a. bmak.uar() - returns user agent
+            b. bmak.ab(t) + "" - obfuscated come back to later, takes user agent and changes it a bit
+            c. bmak.start_ts / 2 - initialized in the IR function just the CF date
+            d. bmak.grbv() - brave browser?
+            e. bmak.get_browser() - bmak.plen set - navigator.plugins !== undefined ? navigator.plugins.length : -1
+            f. bmak.bc - set bmak.xagg based on values 12147 for my browser
+            g. bmak.bmisc() - set bmak.pen .wen and .den to 0 detects headless
+            h. bmak.bd() format: ",feature:0 | 1" 1 meaning exists 0 meaning doesn't returns a variety of browser fingerprinting information
+                a. result: ,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1  
+                    cpen = window.callPhantom - check for headless
+                    i1 = window.ActiveXObject - Internet Explorer
+                    dm = window.documentMode == "number"
+                    cwen = window.chrome window.chrome.webstore - check for chrome
+                    non = navigator.onLine - always 1
+                    opc = window.opera - Check for opera
+                    fc = InstallTrigger not undefined - Gecko agent - Firefox checking?
+                    sc = window.HTMLElement && Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0 ? 1 : 0 -- set to 0 I have no clue what this monstrosity does lmfao
+                    wrc = window.RTCPeerConnection et al. for other browsers - set to 1
+                    isc = window.mozInnerScreenY - check for mozilla again
+                    vib = navigator.vibrate - set to 1 for most browsers unless not supported
+                    bat = navigator.battery - set to 1 for most browsers unless not supported
+                    x11 = Array.prototype.forEach - set to 0, they tried to be sneaky with this
+                    x12 = window.FileReader - set to 1 for most browsers unless not supported
+        iii. variables used
+            a. d = random 11 digit number
+            b. s = d * 1e3 / 2
+            c. k = d + s + 
+            d. bmak.psub = navigator.productSub - 20030107 for me
+            e. bmak.lang = navigator.language - en-US can be safely set by default
+            f. bmak.prod = navigator.product - Gecko, can probably bet set
+            g. bmak.plen = navigator.plugins > 0 - set to 0
+            h. bmak.pen, wen and den = 0 - reasoning above on bmak.bmisc()
+            i. bmak.z1 = parseInt(current date // (bmak.y1 * bmak.y1)) = 402841 for me
+                a. bmak.y1 appears to default to 2016 on 1.7 not sure if it changes
+            j. bmak.d3 = cf date % 1e7
+                a. bmak.x2 = cf date
+            k. n = screen.availWidth 
+            l. o = screen availHeight
+            m. m = screen.width
+            n. r = screen.height
+            o. i = window.innerHeight
+            p. c = window.innerWidth
+            q. b = window.outerWidth
+            r. a = bmak.ab(bmak.uar()) + "" - 10418 in my case
+            s. bmak.brv = navigator.brave - set to 0 unless using Brave
+            t. bmak.loc = undefined ? can't find it anywhere
+            u. t = bmak.uar() - window.navigator.userAgent.replace(/\\|"/g, "");
+            v. bmak.xagg = bmak.bc() 
+        iv. Final Return statement more semantically
+            return bmak.uar + ",uaeand" + bmak.bc()/12147 + "," + navigator.productSub + "," + "en-US" + "," + navigator.product + "," + "0" + "," + 0 + "," + "0" + "," + "0" + parseInt(current date // (bmak.y1 * bmak.y1)) = 402841 + "," +  bmak.get_cf_date() % 1e7 + "," + screen.availWidth + "," + screen.availHeight + "," + screen.width + "," + screen.height + "," + window.innerWidth + "," window.innerHeight + "," + window.outerWidth + "," + bmak.bd() //description in functions above + "," + bmak.ab(bmak.uar()) // obfuscate user agent + "," + (Math.random() + "") + "," + bmak.start_ts / 2 + "," + brv + ",loc:"
+    B. bmak.cma()
+        i. Handles sensor data/ mouse movement
+        ii. Function calls
+            a. bmak.gf(m) - takes event handler thing and returns -1 or 0
+            b. 
+        iii. variables used
+            a. e = event handler
+            b. n = e.clientX - the x position of the mouse 
+            c. o = e.clientY - the y position of the mouse
+            d. m = e.toElement - the element the mouse is going to - this might cause problems? we'll see.
+            e. r = bmak.gf(m) - Checks if the element exists
+            f. i = difference between cf date and the website start
+            g. bmak.me_vel - Increases by num of mouse events  + difference between date and script start time  + e.clientX + e.clientY  every time you move your mouse? I cant really tell what this does.
+            h. bmak.me_cnt - Number of mouse events 
+            i. c = mouse event count + "," + 4 + "," + date difference + "," + clientX + clientY
+    C. bmak.bpd()
