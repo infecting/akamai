@@ -67,5 +67,57 @@
             f. i = difference between cf date and the website start
             g. bmak.me_vel - Increases by num of mouse events  + difference between date and script start time  + e.clientX + e.clientY  every time you move your mouse? I cant really tell what this does.
             h. bmak.me_cnt - Number of mouse events 
-            i. c = mouse event count + "," + 4 + "," + date difference + "," + clientX + clientY
+            i. mousemove - c  = mouse event count + "," + 1  + "," + date difference + "," + clientX + clientY
+            j. bmak.me_cnt = total events 
+            k. bmak.mduce_cnt = all events that aren't mouse events
+        mact gets set to mact + c;
     C. bmak.bpd()
+        i. Creates cookie afaik
+        ii. Function calls
+            a. bmak.jrs(num) obfuscates the number into two arrays 5 digit and 3 digit - [12313, 123] 
+            b. bmak.fas() - returns browser fingerprint
+            c. bmak.hbs() - return headless browser - set to 0
+            d. bmak.gwd() - return selenium - set to -1
+            e. bmak.sed() - returns list of headless info and Xpath
+            f. bmak.mn_get_current_challenges - get challenges returns []
+        iii. variables used
+            a. t = bmak.get_cf_date();
+            b. a = time difference
+            c. e = cookie exists? I got 2 in browser
+            d. n = first portion of abck - details above function is  bmak.gd()
+            e. o = window.DeviceOrientationEvent - "do_en" for me
+            f. m = window.DeviceMotionEvent - "dm_en" for me
+            g. r = window.TouchEvent - "t_en" for me
+            h. i = o + "," + m + "," + r; - just a combination of the 3 above
+            i. c = bmak.getforminfo() - need to research this
+            j. b = bmak.getdurl() - home url "https://www.fedex.com/en-us/home.html" for me
+            k. d = bmak.aj_type - shows where the bpd function was fired from - 1 for cma
+            l. s = number of cka calls thing + cma calls vel + 0 + 0 + cta calls vel + cpa calls vel
+            m. l = PiZtE
+            n. u = obfuscated start time
+            o. _ = time difference
+            p. f = ((bmak.start_ts / (2016 * 2016)) / 23) / 6
+            q. p = number that represents browser fingerprint - 30261693
+            r. v = 0 - represents headless browser status
+            s. h = -1 - navigator.webdriver
+            t. g = cookie array
+            u. w = cookie joined
+            v. y = bmak.ab(bmak.fpcf.fpValstr) + ""
+            w. bmak.fmh = random font seed thing - "87838b6b28b2e952ff9e4e3f1f00f6c6146fa8090ee5d0541c06ecdc180622da" for me
+            x. bmak.fmz = window.devicePixelRatio - 2 for me
+            y. bmak.ssh = voice random seeed serialized - "0d65734a64c01ce05475c3345af06aef5246ddb8f0161ec4776e6f9c160dfd9b" for me"
+            z. bmak.wv = vendor name - Apple for me
+            a. bmak.wr = renderer name - "Apple M1" for me
+            b. bmak.weh = serialized extension list seed - "f437e95c71eb8e0326eb22e9cba9c05b86068086180a4ca09b3bcd32320a1928" for me
+            c. bmak.wl = supported extension length - 31 for me
+            d. S = checks for browser and XPathResult - '0,0,0,0,1,0,0' for me
+            e. C = [] - get current challenges 
+            f. B = ""
+            g. x = ""
+            h. M = ""
+            i. bmak.o9 = obfuscated random value - to function 
+            i. bmak.vcact = format is 1/2/3 + "," + date difference + ";"
+            i. bmak.sensor_data = version (1.7) + "-1,2,-94,-100," + first portion of abck + "-1,2,-94,-101," + "do_en,dm_en,t_en" + "-1,2,-94,-105," + bmak.informinfo - getforminfo() from beginning  + "-1,2,-94,-102," + getforminfo() + "-1,2,-94,-108," + "-1,2,-94,-110," + mouse events mact + "-1,2,-94,-117," + "-1,2,-94,-111," + "-1,2,-94,-109," + "-1,2,-94,-114," + "-1,2,-94,-103," + bmac.vcact - research + "-1,2,-94,-112," + home url + "-1,2,-94,-115," + cookie joined + "-1,2,-94,-106," + "1";
+            j. bmak.sensor_data = bmak_sensor_data ^ + "-1,2,-94,-119,", mr value getmr() function + "-1,2,-94,-122," + "0,0,0,0,1,0,0" + "-1,2,-94,-123," + "-1,2,-94,-124," + "-1,2,-94,-126," + "-1,2,-94,-127," + bmak_nav_perm - check np() function 
+            k. P = bmak.ab(bmak.sensor_data) ^ 24
+            l. bmak.sensor_data = bmak.sensor_data + "-1,2,-94,-70," + bmak.fpcf.fpValstr + "-1,2,-94,-80," + obfuscated bmak fpcf valstr + "-1,2,-94,-116," + to() function bmak.o9 + "-1,2,-94,-118," + obfuscated sensor data ^ 24 + "-1,2,-94,-129," + webgl info  
