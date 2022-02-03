@@ -97,7 +97,7 @@ var bmak = bmak && bmak.hasOwnProperty("ver") && bmak.hasOwnProperty("sed") ? bm
 ir: function() {
     bmak.start_ts = Date.now ? Date.now() : +new Date();
     bmak.kact = "";
-    bmak.d2 = parseInt(bmak.z1 / 23);
+    bmak.d2 = "";
     bmak.ke_cnt = 0;
       {bmak.ke_vel = 0;
       bmak.mact = "";
@@ -430,22 +430,42 @@ rir: function(t, a, e, n) {
   return t > a && t <= e && (t += n % (e - a)) > e && (t = t - e + a), t;
 },
 
+curve: function(x) {
+  return Math.pow(x, .623);
+},
+
+bezier: function(t, p0, p1, p2, p3){
+  var cX = 3 * (p1.x - p0.x),
+  bX = 3 * (p2.x - p1.x) - cX,
+  aX = p3.x - p0.x - cX - bX;
+
+  var cY = 3 * (p1.y - p0.y),
+  bY = 3 * (p2.y - p1.y) - cY,
+  aY = p3.y - p0.y - cY - bY;
+
+  var x = (aX * Math.pow(t, 3)) + (bX * Math.pow(t, 2)) + (cX * t) + p0.x;
+  var y = (aY * Math.pow(t, 3)) + (bY * Math.pow(t, 2)) + (cY * t) + p0.y;
+
+  return {x: x, y: y};
+},
+
 sensor_totaler: function() {
   var mact = ""
   var diff = 0;
-  var x = bmak.getRandomInt(200,500);
-  var y = bmak.getRandomInt(100,500);
-  var y = 0;
-  for (let i = 0; i < 15; i++) {
-    diff += bmak.getRandomInt(10,133)
-    if (i % 2) {
-      x -= bmak.getRandomInt(100, 200)
-      y -= bmak.getRandomInt(100, 200)
-    } else {
-      x += bmak.getRandomInt(100, 200)
-      y += bmak.getRandomInt(100, 200)
-    }
-    mact = mact + bmak.mover(i, diff, Math.abs(x), Math.abs(y))
+  var x = bmak.getRandomInt(200,1440);
+  var y = bmak.getRandomInt(300,816);
+  var tot_x = 0;
+  const one = bmak.getRandomInt(-200, 200);
+  const two = bmak.getRandomInt(-500, 500);
+  const three = bmak.getRandomInt(-400, 400);
+  var random_x = [one, two, three];
+  var random_x_3 = bmak.getRandomInt(200, 500)
+  var coord = [{x: x + one, y: y - 100}, {x, y}, {x: x - two, y: y - 200}, {x: x + three, y: y - 400}]
+  for (let i = 0; i < 1; i += 0.01) {
+    var dd = bmak.bezier(i, {x: x + one, y: y - 100}, {x, y}, {x: x - two, y: y - 200}, {x: x + three, y: y - 400});
+    dd.x = Math.round(dd.x);
+    dd.y = Math.round(dd.y);
+    mact = mact + bmak.mover(Math.round(i * 100), diff, Math.round(dd.x), Math.round(dd.y));
   }
   return mact
 },
@@ -479,7 +499,7 @@ gd: function() {
 
   // Beginning of cookie
   final = user_agent + "," +
-  "uaeand" + "," +
+  "uaend" + "," +
   bmak.xagg.toString() + "," + 
   bmak.psub.toString() + "," + 
   "en-US" + "," + 
@@ -501,8 +521,8 @@ gd: function() {
   serialized_uar + "," +
   random_seed.slice(0,10) + obfuscated_random + "," + 
   start_2 + "," + 
-  "0" + ",",
-  ",loc:"
+  "0" + "," +
+  "loc:"
   return final;
 },
 
@@ -518,14 +538,15 @@ gd: function() {
     var difference = bmak.diff_dates();
     var cookie_exists = 2;
     var beginning = bmak.gd();
-    var form_info = "0,-1,0,1,1386,447,0;1,0,0,1,1649,331,0;0,-1,0,0,1498,-1,0;";
+    var form_info = "0,-1,0,0,1498,-1,0;0,-1,0,1,2588,1468,0;0,-1,0,1,-1,1500,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,2563,-1,0;";
     var home_url = "https://www.fedex.com/global/choose-location.html";
     var aj_type = 1;
     var total_calls = 0;
     var obfuscated_start_time = bmak.jrs(bmak.start_ts);
     var f = (((bmak.start_ts / (2016 * 2016)) /23) / 6)
     var browser_fingerprint = bmak.fas();
-    var cookie_array = [bmak.ke_vel + 1, bmak.me_vel + 32, bmak.te_vel + 32, bmak.doe_vel, bmak.dme_vel, bmak.pe_vel, total_calls, bmak.diff_dates(), bmak.init_time, bmak.start_ts, bmak.getRandomInt(10, 30), f, bmak.ke_cnt, bmak.me_cnt, f, bmak.pe_cnt, bmak.te_cnt, bmak.diff_dates(), 4989478 /* bmak.ta bmak.b() function */, "0", cookie_exists, bmak.ab(cookie_exists), Math.floor(Math.random() * 1e3).toString(), "-1604630381", browser_fingerprint, "PiZtE", obfuscated_start_time[0], obfuscated_start_time[1], 0, -1];
+    console.log(obfuscated_start_time)
+    var cookie_array = [bmak.ke_vel + 1, bmak.me_vel + 32, bmak.te_vel + 32, bmak.doe_vel, bmak.dme_vel, bmak.pe_vel, total_calls, bmak.diff_dates(), bmak.init_time, bmak.start_ts, bmak.getRandomInt(10, 30),parseInt(bmak.z1 / 23), bmak.ke_cnt, bmak.me_cnt, f, bmak.pe_cnt, bmak.te_cnt, bmak.diff_dates(), 4989478 /* bmak.ta bmak.b() function */, "0", cookie_exists, bmak.ab(cookie_exists), Math.floor(Math.random() * 1e3).toString(), "-1604630381", browser_fingerprint, "PiZtE", obfuscated_start_time[0], obfuscated_start_time[1], 0, -1];
     var cookie_joined = cookie_array.join();
     var obfuscated_fpcf = bmak.ab(bmak.fpcf.fpValstr) + "";
     wgl_info = bmak.fmh + "," + 2 + "," + bmak.ssh + "," + bmak.wv + "," + bmak.wr + "," + bmak.weh + "," + bmak.wl;
@@ -588,9 +609,6 @@ gd: function() {
 
     return bmak.sensor_data
   }
-
-
-
 }
 
 console.log(bmak.sensor())
