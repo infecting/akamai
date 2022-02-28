@@ -1,5 +1,3 @@
-
-
 var bmak = bmak && bmak.hasOwnProperty("ver") && bmak.hasOwnProperty("sed") ? bmak : {
     ver: 1.7,
     ke_cnt_lmt: 150,
@@ -141,16 +139,7 @@ ir: function() {
       bmak.weh = bmak.ats(bmak.mn_s(JSON.stringify(bmak.extensions.sort())));;
       bmak.devices_info = [
         {
-          "uar": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36",
-          "availHeight": 1040,
-          "availWidth": 1920,
-          "width": 1920,
-          "height": 1080,
-          "innerHeight": bmak.getRandomInt(500, 1040),
-          "innerWidth": bmak.getRandomInt(500, 1920)
-        }, 
-        {
-          "uar": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
+          "uar": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36",
           "availHeight": 816,
           "availWidth": 1440,
           "width": 1440,

@@ -1,61 +1,96 @@
 import requests
 import sys
 
-def test_high_sec(sensor_data):
-  json = {"sensor_data":sensor_data}
-  abck = "B4E617FD6350956428E73B362416C7A0~-1~YAAQ3PjaF2F1cEZ9AQAAllWSbAYXvPNBRYTn20N8uIGvLCSzLKCGHsvzq0n/1G+L043lGHUfcTgxbj18AdShXcPy/VRZ5sF3cjqjcYYN/euciFDwB6Khzu3WYh+MTSEIf5yJcDQkOtggzO/5PNExNHLDt/vOu0fKggj+xaYUvvZ4NmMJB8X/ZXX6NjxkrrPy15Ux4ZTdF8vpeJJTjDQGJPb2Ii8svgv/rwFkZ6hBFxgFzH9SklBDLgltE8EIi/XFPabKogVVFQl7/RGI6ZBDzBMwdi2v1lks6OJz1jcpg74fgsbu+Z97cjHBxuC1kSCQfvqPzLoZXtKGAxvxYKjeDMXhu5d5AKNfkgO6LIANkpE9tqXzJ76bdgoOpYP040uYii3G0MCbjvvR/zKItslHx60z3YClY+ydQdFPdCQeffrMkPYo5hpCVrwoAogpBR6U+5286ItIfuCWBxnHvqif/IhEjACWWKpQ0ExJ0Es5zMIBwDmaAJrzpNvKmbxYnQY=~-1~-1~-1" # response2.cookies["_abck"]
-  bm_sz = "9F7D28A5790EC0CA075D7272195F3273~YAAQ0/jaF8a//Vh9AQAALY1tbA3zMGYq9kIrM6n0ONk1D0y+VHuLEnXj/DXAv1JEUl3mu0Mj8gVI/B/uPfBazbp4PiupXSObLjUfn1LnWa4+SEhYqNANpCamOG/E88unWgIRu/urqBgP9NBVG5dxwb05ZcaI341L8wa1DzFvxhHgDdeAdPj1YKThR3GbG/1LVZy1GDLFb33Q2SEGxU1zUsVN4ewdV2dmljnivgbG+Ds/KueaA18yo7P++CJaaursta53otofteTs5Mmzc68+JZIzHmgWPKfQD81fcmvDL0+TcykKTE8ZoR/RBMzJxHx7HKxSahUfS1VouEjlavYOuUFk0n/uHLAzROw03tAORJK36MtIy1G986Zvjzwtlfmm7bKK+KiKLpgC0/TEdv1Zlw==~3425328~4343108" 
-  headers2 = {
-    'authority': 'www.nike.com',
-      'sec-ch-ua': '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"',
-      'x-newrelic-id': 'UwcDVlVUGwIHUVZXAQMHUA==',
-      'content-type': 'text/plain;charset=UTF-8',
+def get_origin_cookies():
+  headers = {
+      'Connection': 'keep-alive',
+      'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
       'sec-ch-ua-mobile': '?0',
-      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36',
       'sec-ch-ua-platform': '"macOS"',
-      'accept': '*/*',
-      'cookie': f"AnalysisUserId=23.218.248.220.150371637695398642; NIKE_COMMERCE_COUNTRY=US; NIKE_COMMERCE_LANG_LOCALE=en_US; anonymousId=2C78C3A89B3DE7E174C4030779ED7FB0; feature_tests=as_opt_x_web_test:variation_2; feature_enabled__as_opt_x_web=true; feature_enabled__as_nav_rollout=true; audience_segmentation_performed=true; AKA_A2=A; geoloc=cc=US,rc=IA,tp=vhigh,tz=CST,la=41.5221,lo=-90.5751; bm_sz={bm_sz}; nike_locale=us/en_us; ak_bmsc=B810D5A3C3D662C9998D9C72CCAA2D3C~000000000000000000000000000000~YAAQ0/jaF96//Vh9AQAAIJBtbA0CePVWA7LewCKycTmavNZ60aTY96RbY2sUetdqGheWxo3zYXnaW7Accdzdx2BsRRFqthQDRFYBzqYxkbhtxQQuWaSEfWGPoKZ7vuwqc/8KIDPqKtt1yHHCk75gcoY/soFC9plNX/MySsw3SjVCruCGKeRTCyQp+l2fW6E91X+tNLWf6wPD1lsegF80te02Ma4+Ck5gBdFPUJ19fzdzGzpsD3o9AtPoPQED/E8jIhHy457uekTKE2EdDL7kW/H7ducgEMmdn650PtK2GgyjTIncKCsAaEGjLRWXtvgNiyOp6nfD1UexzCFRgOmLvr88qHf6xZIfCDeT6UHjE2YQIq6kVMG7jQBOzOe2z7X3K5Cd7VI=; ppd=homepage|nikecom>homepage; guidS=fb04b57d-b598-4a4a-bc91-ee725cb63eee; guidU=3aa0566d-4d6e-4b26-9b62-72856e2ce757; ku1-sid=NDtgiwK3XAK4SX2rsYQQ2; ku1-vid=aa42609e-7b86-0737-e2c0-95c89fab2c0a; bm_mi=0D3560C59E3E8B7B91FA2028BFC45FA4~bYLdYMoct+zV/BswxJvA6UC+igcU5hfryEQN+n1dA8msc/SbIZoGYMaocmOg1TLYjSM+Daau4j6W/Rg8B0MxeLKOzI5avf8VNB+v1X9mgApva2Wulz4IgfeqIvIkU4/6a50+QaEWpgss+PhTiMtsm5qLbD9JIQXXeccII7ghwEFqTWKZCVG0dUnKTYGbedzJNuI8ITvYnNq0WSb3lkXPMawEloqDhPErugmHmEJgiew=; forterToken=c52447e0342c4caa9ce5d590f76a2ba6_1638202374160_683_UAL9_11ck; ak_bmsc_nke-2.3-ssn=0rcmts0qMkM2hwWXbJMp7mFptS4iea9QH9EyXkZgzS3QYKCgvZGjt9ktbgEgWUHOFuTjMLwWiI9ucYo1ncE2grbWMLOMbZFA925b7flB1Nw1sjOefN0bknXdlTXkSgf7DB8NQX4UwZMENOIul4BwR; ak_bmsc_nke-2.3=0rcmts0qMkM2hwWXbJMp7mFptS4iea9QH9EyXkZgzS3QYKCgvZGjt9ktbgEgWUHOFuTjMLwWiI9ucYo1ncE2grbWMLOMbZFA925b7flB1Nw1sjOefN0bknXdlTXkSgf7DB8NQX4UwZMENOIul4BwR; bm_sv={bm_sz}; _abck={abck}",
-      'origin': 'https://www.nike.com',
-      'sec-fetch-site': 'same-origin',
+      'Content-Type': 'text/plain;charset=UTF-8',
+      'Accept': '*/*',
+      'Origin': 'https://www.fedex.com',
+      'Sec-Fetch-Site': 'same-origin',
+      'Sec-Fetch-Mode': 'cors',
+      'Sec-Fetch-Dest': 'empty',
+      'Referer': 'https://www.fedex.com/secure-login/en-us/',
+      'Accept-Language': 'en-US,en;q=0.9',
+  }
+
+  data = '{"sensor_data":"7a74G7m23Vrp0o5c9219771.7-1,2,-94,-100,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36,uaend,12147,20030107,en-US,Gecko,5,0,0,0,404587,5588748,1440,816,1440,900,948,576,948,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8939,0.42240665211,822172794370,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,0,-1,0,0,1498,-1,0;0,-1,0,1,2588,1468,0;0,-1,0,1,-1,1500,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,2563,-1,0;-1,2,-94,-102,0,-1,0,0,1498,-1,0;0,-1,0,1,2588,1468,0;0,-1,0,1,-1,1500,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,2563,-1,0;-1,2,-94,-108,-1,2,-94,-110,0,1,0,1316,648;1,1,0,1316,651;2,1,0,1316,654;3,1,0,1317,656;4,1,0,1317,659;5,1,0,1318,661;6,1,0,1319,663;7,1,0,1320,665;8,1,0,1321,666;9,1,0,1323,668;10,1,0,1324,669;11,1,0,1326,671;12,1,0,1328,672;13,1,0,1330,672;14,1,0,1332,673;15,1,0,1334,674;16,1,0,1336,674;17,1,0,1339,674;18,1,0,1341,675;19,1,0,1344,675;20,1,0,1347,674;21,1,0,1350,674;22,1,0,1353,674;23,1,0,1356,673;24,1,0,1359,672;25,1,0,1362,671;26,1,0,1366,670;27,1,0,1369,669;28,1,0,1373,668;29,1,0,1376,667;30,1,0,1380,665;31,1,0,1383,663;32,1,0,1387,662;33,1,0,1391,660;34,1,0,1395,658;35,1,0,1398,656;36,1,0,1402,653;37,1,0,1406,651;38,1,0,1410,649;39,1,0,1414,646;40,1,0,1418,643;41,1,0,1422,640;42,1,0,1426,637;43,1,0,1430,634;44,1,0,1434,631;45,1,0,1438,628;46,1,0,1442,625;47,1,0,1446,621;48,1,0,1450,618;49,1,0,1454,614;50,1,0,1458,610;51,1,0,1462,607;52,1,0,1466,603;53,1,0,1470,599;54,1,0,1474,595;55,1,0,1478,591;56,1,0,1481,586;57,1,0,1485,582;58,1,0,1489,578;59,1,0,1492,573;60,1,0,1496,569;61,1,0,1499,564;62,1,0,1503,560;63,1,0,1506,555;64,1,0,1509,550;65,1,0,1512,545;66,1,0,1515,540;67,1,0,1518,535;68,1,0,1521,530;69,1,0,1524,525;70,1,0,1526,520;71,1,0,1529,515;72,1,0,1531,509;73,1,0,1534,504;74,1,0,1536,499;75,1,0,1538,493;76,1,0,1540,488;77,1,0,1541,482;78,1,0,1543,477;79,1,0,1544,471;80,1,0,1546,466;81,1,0,1547,460;82,1,0,1548,454;83,1,0,1549,449;84,1,0,1549,443;85,1,0,1550,437;86,1,0,1550,431;87,1,0,1550,425;88,1,0,1550,419;89,1,0,1550,414;90,1,0,1550,408;91,1,0,1549,402;92,1,0,1548,396;93,1,0,1547,390;94,1,0,1546,384;95,1,0,1545,378;96,1,0,1543,372;97,1,0,1541,366;98,1,0,1539,360;99,1,0,1537,354;-1,2,-94,-117,-1,2,-94,-111,-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,0,1,70,857,382;-1,2,-94,-112,https://www.fedex.com/global/choose-location.html-1,2,-94,-115,1,32,32,0,0,0,0,12,0,1644345588740,25,17590,0,0,2931.7906511038564,0,0,12,4989478,0,2,0,741,-1604630381,0,PiZtE,66498,60,0,-1-1,2,-94,-106,1-1,2,-94,-119,-1,2,-94,-119,6,9,9,9,17,18,11,8,7,5,5,5,9,334,-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,10321144241322243122-1,2,-94,-70,1838552554;-59864811;dis;,7;true;true;true;360;true;30;30;true;false;-1-1,2,-94,-80,5391-1,2,-94,-116,61112957436-1,2,-94,-118,8a85c9aded2f51e6febfeebd1dd5e89f5af0acaff1f145dc4f501bf22c812cb7,2,a36da050b0f51a16f54a795a9f3c639049813854fbb69c3169a0ae7a7ac1eadb,Apple,Apple M1,a25b5fc7a716e4dde8662385f1a6a7fb9ab1729640bbf1d89c48df1ba36ab89b,0;13;3;0"}'
+
+  response = requests.post('https://www.fedex.com/d1MXRYrxkj_Mp/fPE/tUqpA2d9TPM/9GcuwVb6/OH4vDE9pBQ/dTUzET0l/Jm8', headers=headers, data=data)
+  
+  print("done")
+  get_cookie(response.cookies["bm_sz"])
+
+def get_cookie(bm_sz):
+  cookies = {
+      'Rbt': 'f0',
+      'bm_sz': bm_sz,
+  }
+
+  headers = {
+      'Connection': 'keep-alive',
+      'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
+      'sec-ch-ua-mobile': '?0',
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36',
+      'sec-ch-ua-platform': '"macOS"',
+      'Content-Type': 'text/plain;charset=UTF-8',
+      'Accept': '*/*',
+      'Origin': 'https://www.fedex.com',
+      'Sec-Fetch-Site': 'same-origin',
+      'Sec-Fetch-Mode': 'cors',
+      'Sec-Fetch-Dest': 'empty',
+      'Referer': 'https://www.fedex.com/en-us/home.html',
+      'Accept-Language': 'en-US,en;q=0.9',
+  }
+
+  data = {"sensor_data":"7a74G7m23Vrp0o5c9219781.7-1,2,-94,-100,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36,uaend,12147,20030107,en-US,Gecko,5,0,0,0,404586,4942792,1440,814,1440,900,623,734,1440,,cpen:0,i1:0,dm:0,cwen:0,non:1,opc:0,fc:0,sc:0,wrc:1,isc:0,vib:1,bat:1,x11:0,x12:1,8938,0.523401363261,822172471396,0,loc:-1,2,-94,-101,do_en,dm_en,t_en-1,2,-94,-105,-1,2,-94,-102,0,-1,0,1,2588,-1,0;0,-1,0,0,1498,-1,0;0,1,1,1,620,-1,0;1,-1,1,1,883,-1,0;-1,2,-94,-108,0,1,11332,-2,0,0,620;1,3,11332,-2,0,0,620;2,1,11492,-2,0,0,620;3,3,11492,-2,0,0,620;4,2,11518,-2,0,0,620;5,1,11607,-2,0,0,620;6,3,11608,-2,0,0,620;7,2,11693,-2,0,0,620;8,1,11694,-2,0,0,620;9,3,11694,-2,0,0,620;10,2,11765,-2,0,0,620;11,2,11843,-2,0,0,620;12,1,12498,-2,0,0,883;13,3,12498,-2,0,0,883;14,1,12601,-2,0,0,883;15,3,12601,-2,0,0,883;16,2,12682,-2,0,0,883;17,1,12710,-2,0,0,883;18,3,12710,-2,0,0,883;19,1,12810,-2,0,0,883;20,3,12811,-2,0,0,883;21,2,12820,-2,0,0,883;22,2,12878,-2,0,0,883;23,2,12977,-2,0,0,883;-1,2,-94,-110,0,1,6,499,170;1,1,445,614,145;2,1,3156,616,100;3,1,3156,616,100;4,1,3164,612,100;5,1,3175,610,99;6,1,3225,609,96;7,1,3398,607,96;8,1,3406,605,96;9,1,3414,602,96;10,1,3422,598,96;11,1,3430,593,98;12,1,3441,585,102;13,1,3446,579,107;14,1,3459,573,114;15,1,3462,566,121;16,1,3470,559,130;17,1,3479,553,140;18,1,3487,547,149;19,1,3494,541,160;20,1,3502,534,171;21,1,4214,534,168;22,1,4222,537,165;23,1,4230,543,161;24,1,4238,550,159;25,1,4246,561,155;26,1,4254,588,146;27,1,8335,619,288;28,1,8337,389,260;29,1,8339,382,256;30,1,8349,378,254;31,1,8359,375,253;32,1,8363,373,251;33,1,8371,372,251;34,1,8379,372,249;35,1,8388,372,248;36,1,8397,372,246;37,1,8404,372,243;38,1,8410,372,240;39,1,8418,372,236;40,1,8426,374,231;41,1,8434,378,223;42,1,8442,382,216;43,1,8451,388,208;44,1,8462,395,199;45,1,8467,402,190;46,1,8475,406,186;47,1,8483,412,179;48,1,8491,414,177;49,1,8499,419,172;50,1,8507,421,170;51,1,8515,423,167;52,1,8523,424,166;53,1,8531,425,165;54,1,8539,425,164;55,1,8548,426,164;56,1,8564,426,164;57,3,8680,426,164,546;58,4,8813,426,164,546;59,2,8813,426,164,546;60,1,8839,426,165;61,1,8846,426,166;62,1,8855,426,167;63,1,8863,426,168;64,1,8871,426,169;65,1,8879,426,170;66,1,8888,426,170;67,1,8896,426,171;68,1,8904,426,171;69,1,8912,426,171;70,1,8924,426,172;71,1,8931,426,174;72,1,8935,426,177;73,1,8943,427,180;74,1,8952,435,191;75,1,8963,444,199;76,1,8968,454,210;77,1,8976,469,221;78,1,8984,484,232;79,1,8992,492,236;80,1,9000,509,245;81,1,9008,539,258;82,1,9016,558,264;83,1,9032,603,273;84,1,9356,597,66;85,1,9356,597,66;86,1,9364,557,79;87,1,9372,522,91;88,1,9380,491,106;89,1,9388,462,122;90,1,9397,437,138;91,1,9405,429,146;92,1,9412,411,162;93,1,9421,398,178;94,1,9429,387,194;95,1,9437,380,210;96,1,9445,375,224;97,1,9453,371,253;98,1,9461,371,261;99,1,9468,371,278;100,1,9476,376,309;101,1,9484,386,328;102,1,9496,399,348;177,3,10128,462,389,620;178,4,10245,462,389,620;179,2,10245,462,389,620;240,3,12378,408,431,883;242,4,12460,408,431,883;243,2,12460,408,431,883;316,3,13544,391,578,906;318,4,13644,391,578,906;319,2,13644,391,578,906;561,3,761167,457,616,906;562,4,761246,457,616,906;563,2,761247,457,616,906;633,3,775215,381,568,906;634,4,775313,381,568,906;635,2,775313,381,568,906;854,3,2411012,549,197,-1;-1,2,-94,-117,-1,2,-94,-111,-1,2,-94,-109,-1,2,-94,-114,-1,2,-94,-103,2,1728;3,1812;2,5360;3,8677;2,17244;0,45914;1,57480;0,62832;1,125364;0,164438;1,548120;0,607755;1,622159;3,761165;2,764213;3,775215;2,777797;0,811536;1,828506;0,834655;1,871917;0,879286;1,895825;0,901222;1,903645;0,905171;1,909923;0,931911;1,934832;0,936739;1,942643;0,952073;1,955164;0,981658;1,1009303;0,1041279;1,1068834;0,1090466;1,1283296;0,1343144;1,1387470;0,1486401;1,1505089;0,1530059;1,1560861;0,1639761;1,1644330;0,1679144;1,1771203;0,1822096;1,2034487;0,2078925;1,2084590;0,2342699;1,2342805;0,2369763;1,2397960;3,2411010;-1,2,-94,-112,https://www.fedex.com/secure-login/en-us/#/login-credentials-1,2,-94,-115,309979,7985841,32,0,0,0,8295787,2411012,0,1644344942792,6,17590,24,855,2931,13,0,2411015,8183857,1,2,50,929,74864588,30261693,PiZtE,87368,106,0,-1-1,2,-94,-106,1,2-1,2,-94,-119,0,20,0,0,20,40,20,0,0,0,0,0,20,120,-1,2,-94,-122,0,0,0,0,1,0,0-1,2,-94,-123,-1,2,-94,-124,-1,2,-94,-126,-1,2,-94,-127,11321144241322243122-1,2,-94,-70,1838552554;-59864811;dis;,7;true;true;true;360;true;30;30;true;false;-1-1,2,-94,-80,5391-1,2,-94,-116,74141820-1,2,-94,-118,224118-1,2,-94,-129,38f825eefa08fe20ea32d48bf22a815f52f60e337278131653ac853ff4333750,2,0d65734a64c01ce05475c3345af06aef5246ddb8f0161ec4776e6f9c160dfd9b,Apple,Apple M1,f437e95c71eb8e0326eb22e9cba9c05b86068086180a4ca09b3bcd32320a1928,31-1,2,-94,-121,;9;5;0"}
+
+  response = requests.post('https://www.fedex.com/d1MXRYrxkj_Mp/fPE/tUqpA2d9TPM/9GcuwVb6/OH4vDE9pBQ/dTUzET0l/Jm8', headers=headers, cookies=cookies, json=data)
+  print(response.cookies)
+  test_cookie(ak_bmsc, bm_sz, response.cookies["_abck"])
+
+def test_cookie(ak_bmsc, bm_sz, abck):
+  cookies = {
+      'JSESSIONID': '9817B0FA4E93F51548E1E6D066924EE7',
+      'ak_bmsc': ak_bmsc,
+      'bm_sz': bm_sz,
+      'AMCVS_1E22171B520E93BF0A490D44%40AdobeOrg': '1',
+      '_abck': abck,
+      'AMCV_1E22171B520E93BF0A490D44%40AdobeOrg': '359503849%7CMCIDTS%7C19032%7CMCMID%7C07176893139643360227284596923263896666%7CMCAID%7CNONE%7CMCOPTOUT-1644354626s%7CNONE%7CvVersion%7C5.0.1',
+  }
+
+  headers = {
+      'authority': 'api.fedex.com',
+      'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
+      'x-locale': 'en_US',
+      'x-loggedin': 'true',
+      'x-clientid': 'WLGN',
+      'sec-ch-ua-mobile': '?0',
+      'authorization': 'Bearer l75c4815a4147d44e6af1de680e269508c',
+      'content-type': 'application/json',
+      'accept': 'application/json, text/plain, */*',
+      'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36',
+      'x-version': '1.0',
+      'sec-ch-ua-platform': '"macOS"',
+      'origin': 'https://www.fedex.com',
+      'sec-fetch-site': 'same-site',
       'sec-fetch-mode': 'cors',
       'sec-fetch-dest': 'empty',
-      'referer': 'https://www.nike.com/',
-      'accept-language': 'en-US,en;q=0.9'
+      'referer': 'https://www.fedex.com/secure-login/en-us/',
+      'accept-language': 'en-US,en;q=0.9',
   }
+
+  data = {
+    '{"userName":"test","password":"test","deviceId":"","deviceFp":"{\\"VERSION\\":\\"2.1.2\\",\\"MFP\\":{\\"Browser\\":{\\"UserAgent\\":\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36\\",\\"Vendor\\":\\"Google Inc.\\",\\"VendorSubID\\":\\"\\",\\"BuildID\\":\\"20030107\\",\\"CookieEnabled\\":true},\\"IEPlugins\\":{},\\"NetscapePlugins\\":{\\"PDF Viewer\\":\\"\\",\\"Chrome PDF Viewer\\":\\"\\",\\"Chromium PDF Viewer\\":\\"\\",\\"Microsoft Edge PDF Viewer\\":\\"\\",\\"WebKit built-in PDF\\":\\"\\"},\\"Screen\\":{\\"FullHeight\\":900,\\"AvlHeight\\":814,\\"FullWidth\\":1440,\\"AvlWidth\\":1440,\\"ColorDepth\\":30,\\"PixelDepth\\":30},\\"System\\":{\\"Platform\\":\\"MacIntel\\",\\"systemLanguage\\":\\"en-US\\",\\"Timezone\\":360}},\\"ExternalIP\\":\\"\\",\\"MESC\\":{\\"mesc\\":\\"mi': '2;cd=150;id=45;mesc=1493526;mesc=1810063\\"}},\\"TimeStamp\\":\\"1644350664021\\""}'
+  }
+
+  response = requests.post('https://api.fedex.com/user/v4/login', headers=headers, cookies=cookies, data=data)
+  print(response.text)
+
   
-  response2 = requests.post('https://www.nike.com/J2nQrm/v/6/VUTqQDOQx31E/QiL5zh4kOcaY/MzF7RW8hCA/fDk7VD/ZBJ2kB', headers=headers2, json=json)
-  abck = response2.cookies["_abck"]
-  print(response2.text)
-  #response2.cookies["bm_sz"]
-  headers = {
-     'authority': 'api.nike.com',
-    'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"',
-    'x-b3-spanname': 'undefined',
-    'x-kpsdk-cd': '{"workTime":1638202776032,"id":"596046409c7685ce12a9fd15e0cb0180","answers":[1,4]}',
-    'x-kpsdk-ct': '0rg55fyzEkZ5ab0jJ2f4gsCe23d8NHCiyR2HaLN5tUgHabq12ZYmaGyGoK4j1I2ldjpPSQb84WaFmWZMbYUhERW9ju3dAcLnmEU0JswuSqn8tKZGkDFqgpRMqJEjVPMUJdEgw6EAh3uufUpcyEm92',
-    'x-b3-traceid': '9654a82c1514f54b',
-    'sec-ch-ua-mobile': '?0',
-    'x-nike-visitorid': 'c9dddf8b-90b6-4035-badf-5282099966bf',
-    'content-type': 'application/json; charset=UTF-8',
-    'accept': 'application/json',
-    'x-b3-spanid': '9654a82c1514f54b',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36',
-    'x-b3-sampled': '1',
-    'appid': 'com.nike.commerce.nikedotcom.web',
-    'x-nike-visitid': '3',
-    'sec-ch-ua-platform': '"macOS"',
-    'origin': 'https://www.nike.com',
-    'sec-fetch-site': 'same-site',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-dest': 'empty',
-    'referer': 'https://www.nike.com/',
-    'accept-language': 'en-US,en;q=0.9',
-    'cookies': f"AnalysisUserId=23.218.248.220.150371637695398642; NIKE_COMMERCE_COUNTRY=US; NIKE_COMMERCE_LANG_LOCALE=en_US; anonymousId=2C78C3A89B3DE7E174C4030779ED7FB0; feature_tests=as_opt_x_web_test:variation_2; feature_enabled__as_opt_x_web=true; feature_enabled__as_nav_rollout=true; audience_segmentation_performed=true; AKA_A2=A; geoloc=cc=US,rc=IA,tp=vhigh,tz=CST,la=41.5221,lo=-90.5751; bm_sz={bm_sz}; nike_locale=us/en_us; ak_bmsc=B810D5A3C3D662C9998D9C72CCAA2D3C~000000000000000000000000000000~YAAQ0/jaF96//Vh9AQAAIJBtbA0CePVWA7LewCKycTmavNZ60aTY96RbY2sUetdqGheWxo3zYXnaW7Accdzdx2BsRRFqthQDRFYBzqYxkbhtxQQuWaSEfWGPoKZ7vuwqc/8KIDPqKtt1yHHCk75gcoY/soFC9plNX/MySsw3SjVCruCGKeRTCyQp+l2fW6E91X+tNLWf6wPD1lsegF80te02Ma4+Ck5gBdFPUJ19fzdzGzpsD3o9AtPoPQED/E8jIhHy457uekTKE2EdDL7kW/H7ducgEMmdn650PtK2GgyjTIncKCsAaEGjLRWXtvgNiyOp6nfD1UexzCFRgOmLvr88qHf6xZIfCDeT6UHjE2YQIq6kVMG7jQBOzOe2z7X3K5Cd7VI=; ppd=homepage|nikecom>homepage; guidS=fb04b57d-b598-4a4a-bc91-ee725cb63eee; guidU=3aa0566d-4d6e-4b26-9b62-72856e2ce757; ku1-sid=NDtgiwK3XAK4SX2rsYQQ2; ku1-vid=aa42609e-7b86-0737-e2c0-95c89fab2c0a; bm_mi=0D3560C59E3E8B7B91FA2028BFC45FA4~bYLdYMoct+zV/BswxJvA6UC+igcU5hfryEQN+n1dA8msc/SbIZoGYMaocmOg1TLYjSM+Daau4j6W/Rg8B0MxeLKOzI5avf8VNB+v1X9mgApva2Wulz4IgfeqIvIkU4/6a50+QaEWpgss+PhTiMtsm5qLbD9JIQXXeccII7ghwEFqTWKZCVG0dUnKTYGbedzJNuI8ITvYnNq0WSb3lkXPMawEloqDhPErugmHmEJgiew=; forterToken=c52447e0342c4caa9ce5d590f76a2ba6_1638202374160_683_UAL9_11ck; ak_bmsc_nke-2.3-ssn=0rcmts0qMkM2hwWXbJMp7mFptS4iea9QH9EyXkZgzS3QYKCgvZGjt9ktbgEgWUHOFuTjMLwWiI9ucYo1ncE2grbWMLOMbZFA925b7flB1Nw1sjOefN0bknXdlTXkSgf7DB8NQX4UwZMENOIul4BwR; ak_bmsc_nke-2.3=0rcmts0qMkM2hwWXbJMp7mFptS4iea9QH9EyXkZgzS3QYKCgvZGjt9ktbgEgWUHOFuTjMLwWiI9ucYo1ncE2grbWMLOMbZFA925b7flB1Nw1sjOefN0bknXdlTXkSgf7DB8NQX4UwZMENOIul4BwR; bm_sv=15F215B1F4AEEAC4DD77E2289B88F7C1~5BlCgwxvYyEAX6rRgjNo6eKUusqTntpSvMwXTVZHpkuTtvtcSrAFJtCVMziJ4YH0Tj5FIYf/2uMtQOR8AyzDqBafREkiJ4AZA97MGV32lHGvHNJ9g5dZs8ghPcpUtNmPsjxeSY6ioJF01aDmNrKYxg==; _abck={abck}"
-  }
 
-  json2 = [{"op":"add","path":"/items","value":{"itemData":{"url":"https://www.nike.com/t/blazer-mid-77-vintage-mens-shoes-nw30B2/BQ6806-100"},"skuId":"9b31e533-9143-5e29-bf44-a232d026de25","quantity":1}}]
-
-  response = requests.patch('https://api.nike.com/buy/carts/v2/US/NIKE/NIKECOM?modifiers=VALIDATELIMITS,VALIDATEAVAILABILITY', headers=headers, json=json2)
-  print(response)
-
-test_high_sec(sys.argv[0])
+get_origin_cookies()
