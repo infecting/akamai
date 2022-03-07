@@ -93,7 +93,7 @@ var bmak = bmak && bmak.hasOwnProperty("ver") && bmak.hasOwnProperty("sed") ? bm
     loap: 1,
     dcs: 0,
 ir: function() {
-    bmak.start_ts = Date.now ? Date.now() : +new Date();
+    bmak.start_ts = Date.now ? Date.now() - 2000 : +new Date() - 2000;
     bmak.kact = "";
     bmak.d2 = "";
     bmak.ke_cnt = 0;
@@ -439,8 +439,8 @@ bezier: function(t, p0, p1, p2, p3){
 },
 
 sensor_totaler: function() {
-  var mact = ""
-  var diff = 0;
+  var mact = "";
+  var bm = bmak.diff_dates();
   var x = bmak.getRandomInt(200,1440);
   var y = bmak.getRandomInt(300,816);
   var tot_x = 0;
@@ -454,12 +454,13 @@ sensor_totaler: function() {
     var dd = bmak.bezier(i, {x: x + one, y: y - 100}, {x, y}, {x: x - two, y: y - 200}, {x: x + three, y: y - 400});
     dd.x = Math.round(dd.x);
     dd.y = Math.round(dd.y);
-    mact = mact + bmak.mover(Math.round(i * 100), diff, Math.round(dd.x), Math.round(dd.y));
+    bm += bmak.getRandomInt(0, 5)
+    mact = mact + bmak.mover(Math.round(i * 100), bm, Math.round(dd.x), Math.round(dd.y));
   }
   return mact
 },
 
-mover: function(count, diff, x, y) {
+mover: function(count, diff,  x, y) {
   return count + "," + 1 + "," + diff + "," + x + "," + y + ";" 
   // return "0,1,68,540,121;"
 },

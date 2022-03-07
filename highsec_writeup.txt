@@ -1,91 +1,95 @@
-n3.url/Rr = location of the akamai script
-RK = part of end of cookie ex: "1,32,32,0,0,0,0,14,0,1646069031960,-999999,17609,0,0,2934,0,0,32,0,0,C80D7A4714610EF19EA5658145A9E9E0~-1~YAAQ1EJ1aG32xhB/AQAAyuNbQQczgCfqWzJhidrHOHpPW0bTUF5PBAwb8c60EI0+SXCzQcrdgzaO1PTHVJTpqxfTchAR70bOJromrjCfhE3xqGltfldVxiTonG77lUVOcsR1HukKLLHpSYdhQt9zku2+n3fKj9uQhLBSnqLgzl2Nsf1iF5NQfcj15DrZrHCUG2eriaN27XHemkEAXqy3tV1LOH/nM7VhYjKftRZmuomZ+Dwl5Ihf8YUmpzghwFC7phVDq1eh0fH4bX4WqgkJpqU9Yo1Ffbupl1zn7BqIEuYUUqE9cW6kHVB6L4FAE9u2Z2rwqvHygl59fn4C2z69yvSkpJjYu1zy3ooIz1G/M33zEHUjX3UEG44wcwDtHqktnFTuylQsreh+wKVbJLi4tZJ5fz5EkuonweFD83b2BWdttHZ15TRw9lwm9bWVH0co9k5RIcfA6vdi4dQOXbsd02WQJy8z7+LtanXfHiwK7QhHAnMyFcuIbcE5Zwojb5RNfU12itHnF5Y=~-1~-1~1646071838,48683,-1,-1,30261693,PiZtE,75773,87,0,-1"
-d9 = user agent
-c9 = previous cookie
-C9 = "do_en,dm_en,t_en"
-I9 = mact? "0,0,0,0,1158,630,0;0,0,0,0,1158,630,0;0,-1,0,0,1227,-1,0;"
-p9 = fpcValStr
-v0 = some sort of key or string "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul"
-w8 base 64 string . OOyEY5teaqN1FBS91mLJ6g== in my case
-bV = random seed string "0d65734a64c01ce05475c3345af06aef5246ddb8f0161ec4776e6f9c160dfd9b"
-CH = random seed string "0,841583dac09a721cf2d2c57a09180590d9939b2b73219e5cc6b1dc72b2b04594,0123456789101112,Reload"
-E0 = weird array of random seed like numbers ex: [
-    "0.4470cf334b729",
-    "0.0d22fe02a10d4",
-    "0.f4030d70543ba",
-    "0.922959f884f32",
-    "0.fd834b2a6ed58",
-    "0.0871bc1edf71e",
-    "0.acb8722fd8668",
-    "0.98527ef0492a4",
-    "0.0aac071512c8f",
-    "0.15f4be301bf7b"
-]
-FZ = no clue "2,751827;3,756577;2,756971;3,787304;2,790021;3,828722;2,839791;3,852370;2,854820;3,859204;2,860554;3,1180371;2,1181653;3,1183455;2,1184770;" 
-I0 = cpen cwen etc
-06 = GPU "ANGLE (Apple, Apple M1, OpenGL 4.1 Metal - 76.3)"
-Qg = possibly pointer values? "0,1,834096,-2,0,0,630;1,3,834097,-2,0,0,630;2,2,834239,-2,0,0,630;3,1,834246,-2,0,0,630;4,3,834246,-2,0,0,630;5,2,834307,-2,0,0,630;6,1,834323,-2,0,0,630;7,3,834324,-2,0,0,630;8,2,834416,-2,0,0,630;9,1,834430,-2,0,0,630;10,3,834430,-2,0,0,630;11,2,834493,-2,0,0,630;12,1,834533,-2,0,0,630;13,3,834535,-2,0,0,630;14,2,834593,-2,0,0,630;15,1,834621,-2,0,0,630;16,3,834622,-2,0,0,630;17,2,834697,-2,0,0,630;18,1,834700,-2,0,0,630;19,3,834700,-2,0,0,630;20,2,834799,-2,0,0,630;21,1,834822,-2,0,0,630;22,3,834822,-2,0,0,630;23,2,834856,-2,0,0,630;"
-Qv = random seed 3  "38f825eefa08fe20ea32d48bf22a815f52f60e337278131653ac853ff4333750"
-Uv = mact? or kact "0,0,0,0,1158,630,0;0,0,0,0,1158,630,0;0,-1,0,0,1227,-1,0;"
-b0 = AES key? "E0AF447FE96E64308D98E7254D83485B"
-c0 = array of AES? [
-    "268F5501D2F79216EE75F40D367D54C31646069031960YOzNKdrDaU",
-    "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul"
-]
-dH = webgl info? ",0,object;8,5,1,Google Inc. (Apple),ANGLE (Apple, Apple M1, OpenGL 4.1 Metal - 76.3);8,5,1"
-fZ = canvas? "2;3486769;4601668;28,746671,0,1,21;9Q>P{ <jm[#<-i_RG/rSBb,$$atpN]_|(2-4$vAwqu=gP><w|hmI=L.43l(.{$5LKep&[r3svu^wlMXL@JH&wE 8+kV1.D>wk9HZJM-ppsUx}kXfjnsCZ%fr)d1@2SZ~8Ql(-3mA^gSy+ftk&)<v#W6LiI4?$On8Iy,@PUC!<J1hxk%z=9HDH%a!C%w#wHj2M):KlseRu# JbNi}>:SHV9%T^[ZZoSK(B(9<P=umj?wlD8Uh&.`YaM?j/us*Do,u4vDq}:-~BvdTvk>Jw~KVeRGdE>.Xm8aYul=[wCG;c)5w39h!_f=V]EAu[UJh2j?oM4Ufi>K^*VHYX}Ne.}f+_IJM#)3ATPiWzJ]2M1X)1Q i1r CgD6d1*DDsBh81SzE6ABf;)3>.XKC-/pyc,r}t)+{AK`jQmAyu.zNh04Y;AD;lR%5J#)&`<k5@uXvsc>jM`5in8h:y_8pO%.[FMHfW5E4`|awrHhW0e3L@%0{:IjymwNzVKZTLwwJqxIHk4yWIvi{N~fX;o!$[q ,`@kV+ycK^7|5iRF{C>=S,x?nxouTQj^TLy3w}!u^bn(b4]5.c3{J5hb~3]Co!MN+SLh2<j2A|vMBa-wvAUo 6ChG[]VDMD92]+Q!0tn&uK[4i(,,DWwoJfm4;`GateI,0jFW1|K@U~Mcw:6o^O3YYG9^i61h/&%:Nh~0G?t|j%qiEz-#kXCy|s{};+aV+|QH6:jocedC !lQ`#AGTZi4!$dH&4l3fq+}c|2GV 7ssT`if`RNkmBV~{7;as;UU:!(,`{Wi]c1H%ok59:/Qj_Du<qNy0KMXqW,jc{Ckd_oZ4O$x4_N2tbkb)cssqtPD1C? 8Ij(dyMs{j9L.ZIta0l1U_Q!UPY{yWhIf1M``P-gux6R8lX<5PJ`%27sOOWq{f)_yRc)#5oJVW,N9glFJtg+N[ N(C7l|Z%j9j/NYiA2/=rF2htBT;tH=(5#mt|XqE$e/m?hq,cUaa!aWXYKF9$Z4A^M5?U!_8sQ/+C|D+(r4G%gc;R,D+~V?Jx`Te h6{U=qqBu0E;|J~M9Jv r#mzG?Xo~a]!R&)yuYG|r#@7,]uu^OMqA^VYG2T$%nD]H}iMI*#SE^]jY<.zPcdq},2.*iOlucBaR*$ln[gB.elO!_$jgvm57INmNMzXPf6UM2-w.tzWT}Lag9molir5Eos#~yR9>C!KO-+-5y=soH!~H}NOMq!7R}(<,@ [r$_*7{,352@:.XMXfN6?3W_0Mw.ELO0m0A+vrVjLg]B05pMv)vXin9?v5s$PXOO4LzS/85KJsv(.4oS*C5}3<W*_dUl@E^E:k)aP`cx-TK}v)hcyR6.OR/E$H+X+9U>:c3{kzoO] ;RZjVLzSG=Zl>iBkU$au9;0T))w02ap@W!4D@9d53>ZdUxgB|N.H`q*Ez5d/,h/XwD`ytmJ)/|IkOzmN5qM^C5G}X[T%:k*h}_x0BQ _+c/U@zpU>th+V`zP-@5s*g,c/_%LO[A1.8uB9gsH?!q>k$<{YjwPbHun3sMRer_8Yk7wjUWE5}z4{0L7 *M!D-[Ho[yd|(r|i*pMM,(x|aZ-(2XS7OhLlYPrYJ[OZ#pf+G%gWR[SjMK{t@=*+8|>g`/^pg5aZlc[4)qcTqyq5!#s8d.{K>M?}l&uUO+j#_XS!7<t0 A>KNM:.S2.%R$^MBt7k !mBq*2g?9x0).Mao{if1XsvJi^B5 2~#a[Ceg4<w#l+}HNzy(}uW;;I|Y@43.5%)~xN|0ArOPI:P#+T~:1tT<`B0__P^NibvZ_)k{=j^)]*9~9gq?3G~d}3nTMIXZvy$l)a@Z{e4NL}=]xDZ.47!{-P9k|o0<LUuloT<R{oPbFp,d}mQoz7.p3m7~78F`~+HJS?&W(sa<$HvItIwRTiZV)V8;@Ii#FHt&!*qEfeSp{g&uA&7{5]UFmM9-@ez6~j7?iLEhY1.NVOGt=4a?[&|p^}-xDBi)j5Rk&ysF20;ZtV-{NHqUzDJD(cZ[}>a8X1Zd:5;rQff9TAuoM@ _zT]nE(.>]xR!Z)Q|>QV&r.2f8)PUR8w~ `g+bPWe3O.[;rN|AGYI|@J:hQ$<y{]M,^p:ren,_%h(uJ.V%HcD,,G%HA1%6,*fB:{oPHhyP/{YR-tNv)N>6Yt]=%v&|$noQDRqjm%FtP=}|BKq]l9x!Hg]<D,>=TE7-u@Y^Wq: UJ/1ps=$>hek2[F191MHgnoJ[g@-?x+tu?05~xNF[=BDo89s<,RPjk+kV4mkyGs]9I04(2w`)QciFzmu;2[dZj>WV&X3FkG8}+%(t5ihKq~OeBA>aR37c_*(*f=Ze:wh_a`jx%ol6y&D/Yv^*5a Hcx $kHbwH1&|4>TJZQZ3W5I7u|(Sb@K|8i_q]CkucLSKXg)qE*Bup+;At2EX-V _uFDW=;W~cSYbs}ONknk]So9/}(Ez.}2t3a{;%mMkSGN^r:]o50I5/T)up%>t>xG8W2BbXUuXF&VQz;v MMlWO)`TBp*e.zS7i7_~~#_0y|7Fl4h4Zn|p{V/1&PpN%o=@eJs2BDyTVSn+duawU`& $k>NP A@t`6WEtH|H`;F{(G4n>y_G1d32J-hxuy_imzp{FkH~cFdA?B(jA|V0E|+9}bHTg:%A5SU: b5=RQ>KSxR+kN+k0cd,q^*5xFI,0)wqg<{,Y:1OZ4_b. h*`;LjUQq/lMS)I1biqR B+!%6W;`Q9}l`+kyI;1^{kGSCV>YIK?%Dsje6?9aP78#mG/Hthv4eQCIIPHfccZ@f=RHoFl?7mG~zTDh<67k42!*)LE_gq_d+kfm8XT;+y*~z^ZtJZN5ddRnb,<Sdjqb;~-4j$*krludkbV|U_q[+(}FAk{ROe cAq4?xJN9BIPJTE>~[e}hF>Ddm4Hv:KMK-{?Q*[VUfj%x1%,cKStkOJ]x7evZ[0*Bvf$F&et^ =@O&Ug>(SaT:^d,Dt9k&TYr_Pr9 bxn&@akw~6zs(IQ.CK%Q.T*@ .O+&J!tRbn5Cpo<AR=<b2|s6N}?2S8a:JWb`%R>F [)ThSJO-69%0Y|w*e,vMXv kEwX#Rd14K}Mgm)n%i9Pxz$JeLre4%WAZ}{3_JLC]gRqFd7Wrm|K#.=j~xA<%mD8f!-bsUQf6AxZxF{d.CtV,,Y[%qFXkE)}<u)5~^+X%;}H#r]zFGRhfn,gG0vg~gp&]3Cw1*=jj3GN[<( ,;r>x%cmH>#thsEW5/VihA`wEj~NRvjvQr#ei,=3^aOZOZJ8|fn?:1I^Iwi;<sf3 &HAF_1h[[MJ^_XW4.Krmh4F2i]<={sC/QrkfFgJ/G=6QX__E?]5+;]~r<@-7toK/f3%5c1(h{#4B[Q_M^!HoJ+KC~*nybe=2i2::)IH7JSm#9:QBDvWdbKigSKDMII73B78L)o^RqvD`$.0=7zZZnI%q[si{$$ wGv/I%dqh33brPTqzsSCYpU)~}+$8;MCH&f--(fyn@L{=dvCA[E/Fc;(%~DDcSup|U<j{f0nkt[4E(Iqx~pn#F^IYxswei[ci pb,E>{W,z. Y%PfM27$Ln_riYHkJ=F$p),,{i/Eu9-N4P-<iKW{I98MNz.in:D_KNn8DHe|U|r>#N*Gffa7rt^~-IsEV30PEW}YXV$F|W7uc;*1iiyT&|#C]$Lz<e!HHY*fiuLiN#qGL&g U]jN|52_uKlQvMh058$elkQ}[H-#(Z?11FRK&8BX+a<hB{Dpl#^Qc^z1rN[58ylBv.;5z$@b*a>#[AkFJ_Q)Wl@zveOUP81bE]znYu|W#zS?{w(Tp.)u7H$grH^TeFO$x-J@9TeIxmB7 T4u4M.Bb gOQL]LZOV2%>ni^}=%b[..jnA*Jae_*K@)0*;;CHU8$P%wyIlS:/i#YR3t<obz<{eI^`z-5;=0@^/I5f3vYYMD63%t8l}vC (r%1KZjl*xvO4(Ap>9#(o%iwX^{][wc/-G3@m%MNgVd-v$6u<M71:::H5?iJW[P616Pc~5dv(9<zdp}b9A;JPX]khcGv>O1#x!Ji*Q|1R]j{h,i[c@-Iw9qVzLfL:)#^mtBi/~1Niwaw=2L,}/X>|:v^)kOn0!NkEX/M,?1Mz~83+7vdPXj$:Wh)3?..Ognq#41,c5xKl.IE<o+6 ;A[uG[(%?7/Y!%.P_>gPvc<d3V@;tEC9ZhCE!2_|*/5a92:]&c2wI4iEn47@|YUJr UrTkB`~q|R1;Co9yP?{pG.Y ~4kBOS&=r.vMo3nJe;%3Lx:!`XF9hd%fqyb?KX{G|G.[6Y-/9}k$-f4&flJM6yL4AW=,2Hu>xO7re}PveRGRdY,pj_WR@?tOixvfv1k$eO;lO(Xj$~^:E4bnSSKW<Ju]zJ3+?Y>rY5}pT-`v:A2]qhHB1G6Eot{0XMVP{2o=:ooXO|b&GPDq;}jme{x*|0|a>Rbc0T9mhOSB:fe}DKIz?G8B8tLuhz[Q9dcn1fH+)&ymxN2n?HD JLBQNos;:RD:oN_U3`e<H2<:;+vK&19h@I>_`5FP>X+xP;OU-k`DVNeOR&&W3^90l|%]cC*V]|oO.nw2{TRFZPde%W/wTu<v$78Vd<Ns;[auM;QkX<D9OPfj%~$ZJe#iYhg0X0<.<fu1mU|4$j{z/0TY+t4wa}8<}=Ly=s. /u~9yt7dX9TDx#ARy}.vi2ZPB_rDl1c+,Rj- qKgmcgjHU$B_lyri/bl_w7r&/C?_JZ(rsR*xv&2n*Su9Ef^b(aYc&B4^JudAu4gfnD(vy;EpHu6ewB0B{TZ]6VBk`D*bEkCCK-jjm5R(N2E*7uwf^9LJ/KAdyiW9&/[-pF,3[/@*EBcHa(:B1k.7a;.ntRZ2!L59[E{8<r7$Y1kK}CRnYBTkHw{cYLF8:jD]oj oz[vld,e}oV1Lea >#(KDB6lf0rz?a&o9KX%n#DU7vG@`$|:Zu-_!]|*~X9~yj+*GsI)zZH:0YBe*-x;kUHe=Rq^_bQHd20+izr=C{+jl?xPr v@QP&f]q~?>J.#E*77g}rVRBC9/na5_Kg=hd[xf/BIci`U2#x+lvj``SSXWB<WB=N,JkVokJJu{145bCV[<os[XQfcgWO3bt0cEHKxrJyu7O<V,o)@)GPIIWirucpL.<O0~C*U%(V)1b[^A2M_Q+5#6MWejkpb;Wg_FO[|B!Gr|SNvYQs3q`aYz-L@}DK)!@r;DU(NvcX2KyLj^T{K=#(.TS,.YRbRHj0%z;WzP(H3M.=h[Lazl0FGq)O_18F>5^>&%KOAWL$`7g{A:?mM;>K]$:r>Xj }pL%/$R^S.kBKJ8Y&.$b/B6Ve*S-S.-XJY3g{sKeG fV@ h|NRgOz}C<[/^E]9Nw}zk<JS3WMqoT?2{?v|0cU]m$7a0m9C[ <`/y=,h42[XD@+x720]E+=Xc(zF*YLf3BZG1IYAscPJC9- P.MfW@SsGaS#|?>[7MWY?aojB7/.-wqeM0NkfOm,W+#`N+yF,E]MCzIzf%IRMoM`A~Kkbb~>$UA( ^[/l#JNSw>0d|nw,5~:~q!]Ve%A-a^?M #WFn:L7kV,~-%<6`YYNCs@DC&?,kma^UG#*Flp&R4~rt(GOfp*oyS|+Ta-#`iZjiiE=ZBNS2drj{%9[!x5?8_HVdEthSccl`wRW)`p#_CCBdsCA 4?EM,`|9uPC@<AScm[ZB!8C/y6~<u!@iv9GW<%BP6o~q..@CSaUE/@^H6AGk%W OgVrrx6HpV>G9]e}*<DL=yGfMANd9W3O3I}%G0+GvdHTa 4N`),9}n,]QUpvInMm_|_`.wsGocYpk,Hu$Nitdp~QBLe&Y~k?~74<h_c7^[Glr<Y2I|&>49b=G@T|b+rO;bJ|=;Rh?IJfy9k2b(HrWjUk zMwL/6GKuf-L^iH(~~?fHe@%5Nnk~]FNO%K=uuDF9jA&k*iTX](J5U1 *Q~*?$`o,Z$vIZS5!%3k|Czq (]xe#qC+Gs*Cy|&I|VV 4}|qQ2n+S8z*G @5bX!n8p.6+r<a<rhOha[IerduC2zNS.TV1xfKxKw6.uCQG ,u-p4&{`Ik$.)HXCvhGL-(R:C wR@VO1;29?RJV9}>x{mG^Doua^D2xg+PMM$Cyis8GMfke`F}H]T!O8vr^mZY3|Gxy+[/$r+&HRpn6vvM!&1j/*ot^iTiL7Z;PV(kdfo!<Ln|4+,ZFUe3reOVK[KcM@kSWkQAB<N^(8fq;5:kRk#c41 0:IHQ:?|Py9}ZzR)4i{?`-!3vak<zUPOis~0]./zap,#f&~KZ?U&?jz&r]#=&jmqz8TYvu!^@5uWMDHP|YxB7s<3/:f(6zyx>U~xCGQ>>c+ o~-*sJnXofG$p7Jx5Ogi*S%Ahs(xa5mUVw4q8)R.O<btv4=epayyJe4W 3P@8n<DGf-Z4wL7kDs4;;s<HQ`u@l8O39^h]-ww!EhQxvT?uQ}GMP7n sI]+I-S-Snfwa3?`jF$dhB-pV%SizY3A@y1n+{JOzFzxaD__:f^:7&k_KvYh~U1xKh7N!D(d CyHKxHbX}|phKP4-`HZynKsjHsb0*U=n;VjXDn,i=>**{!tl35;oaMi~]|rOK-l3}3YE-]}kN=6C>S,>zc0GCGh%V:}fQB=aEb1x&JjYFAGQKUXfD0Z03{InS2$kgIB(p,VPZ)WE4D-Ygug9[W#E]S1RG$ydoX[9.L&&#[.*!y3EYhk%Zn7y~+Z)xOjScASA;^/;HxLYN]h&?ahz}v[46I!"
-h6 = random seed 3 "5d46e782775916804ffc6ea60cfa44fb08a21a9cddbc005eb9996c50f34ea1a4"
-kv = array of keys and E0 values = [268F5501D2F79216EE75F40D367D54C3YOzNKdrDaU: "0.c7030f8ed3a2a,0.6e08396a9423c,0.0e48f077219c9,0.13bae1000a42e,0.38218e088aefb,0.860ec081f2dc3,0.e7a1940fafb63,0.2060b06deecf6,0.e04840ed4e76d,0.14097fd8e09f3;0,1,1,1,0,0,0,0,0,0;0,3,0,4,3,0,1,5,5,2;268F5501D2F79216EE75F40D367D54C3,1646069031960,YOzNKdrDaU,268F5501D2F79216EE75F40D367D54C31646069031960YOzNKdrDaU,1,1,0.c7030f8ed3a2a,268F5501D2F79216EE75F40D367D54C31646069031960YOzNKdrDaU10.c7030f8ed3a2a,210,214,61,205,191,157,197,104,214,41,231,242,90,121,4,120,10,154,160,213,12,224,64,23,55,113,216,173,119,129,95,158,748083,0,1646069780101;"
-E0AF447FE96E64308D98E7254D83485BzXRBbJPsul: "0.4470cf334b729,
-]
-n0 = array of keys possiblt with other info 
-[
-    "E0AF447FE96E64308D98E7254D83485B",
-    1646069031960,
-    "zXRBbJPsul",
-    "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul",
-    "1",
-    "1",
-    "0.4470cf334b729",
-    "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul10.4470cf334b729",
+DICKS SPORTING GOODS
+
+    n3.url/Rr = location of the akamai script
+    RK = part of end of cookie ex: "1,32,32,0,0,0,0,14,0,1646069031960,-999999,17609,0,0,2934,0,0,32,0,0,C80D7A4714610EF19EA5658145A9E9E0~-1~YAAQ1EJ1aG32xhB/AQAAyuNbQQczgCfqWzJhidrHOHpPW0bTUF5PBAwb8c60EI0+SXCzQcrdgzaO1PTHVJTpqxfTchAR70bOJromrjCfhE3xqGltfldVxiTonG77lUVOcsR1HukKLLHpSYdhQt9zku2+n3fKj9uQhLBSnqLgzl2Nsf1iF5NQfcj15DrZrHCUG2eriaN27XHemkEAXqy3tV1LOH/nM7VhYjKftRZmuomZ+Dwl5Ihf8YUmpzghwFC7phVDq1eh0fH4bX4WqgkJpqU9Yo1Ffbupl1zn7BqIEuYUUqE9cW6kHVB6L4FAE9u2Z2rwqvHygl59fn4C2z69yvSkpJjYu1zy3ooIz1G/M33zEHUjX3UEG44wcwDtHqktnFTuylQsreh+wKVbJLi4tZJ5fz5EkuonweFD83b2BWdttHZ15TRw9lwm9bWVH0co9k5RIcfA6vdi4dQOXbsd02WQJy8z7+LtanXfHiwK7QhHAnMyFcuIbcE5Zwojb5RNfU12itHnF5Y=~-1~-1~1646071838,48683,-1,-1,30261693,PiZtE,75773,87,0,-1"
+    d9 = user agent
+    c9 = previous cookie
+    C9 = "do_en,dm_en,t_en"
+    I9 = mact? "0,0,0,0,1158,630,0;0,0,0,0,1158,630,0;0,-1,0,0,1227,-1,0;"
+    p9 = fpcValStr
+    v0 = some sort of key or string "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul"
+    w8 base 64 string . OOyEY5teaqN1FBS91mLJ6g== in my case
+    bV = random seed string "0d65734a64c01ce05475c3345af06aef5246ddb8f0161ec4776e6f9c160dfd9b"
+    CH = random seed string "0,841583dac09a721cf2d2c57a09180590d9939b2b73219e5cc6b1dc72b2b04594,0123456789101112,Reload"
+    E0 = weird array of random seed like numbers ex: [
+        "0.4470cf334b729",
+        "0.0d22fe02a10d4",
+        "0.f4030d70543ba",
+        "0.922959f884f32",
+        "0.fd834b2a6ed58",
+        "0.0871bc1edf71e",
+        "0.acb8722fd8668",
+        "0.98527ef0492a4",
+        "0.0aac071512c8f",
+        "0.15f4be301bf7b"
+    ]
+    FZ = no clue "2,751827;3,756577;2,756971;3,787304;2,790021;3,828722;2,839791;3,852370;2,854820;3,859204;2,860554;3,1180371;2,1181653;3,1183455;2,1184770;" 
+    I0 = cpen cwen etc
+    06 = GPU "ANGLE (Apple, Apple M1, OpenGL 4.1 Metal - 76.3)"
+    Qg = possibly pointer values? "0,1,834096,-2,0,0,630;1,3,834097,-2,0,0,630;2,2,834239,-2,0,0,630;3,1,834246,-2,0,0,630;4,3,834246,-2,0,0,630;5,2,834307,-2,0,0,630;6,1,834323,-2,0,0,630;7,3,834324,-2,0,0,630;8,2,834416,-2,0,0,630;9,1,834430,-2,0,0,630;10,3,834430,-2,0,0,630;11,2,834493,-2,0,0,630;12,1,834533,-2,0,0,630;13,3,834535,-2,0,0,630;14,2,834593,-2,0,0,630;15,1,834621,-2,0,0,630;16,3,834622,-2,0,0,630;17,2,834697,-2,0,0,630;18,1,834700,-2,0,0,630;19,3,834700,-2,0,0,630;20,2,834799,-2,0,0,630;21,1,834822,-2,0,0,630;22,3,834822,-2,0,0,630;23,2,834856,-2,0,0,630;"
+    Qv = random seed 3  "38f825eefa08fe20ea32d48bf22a815f52f60e337278131653ac853ff4333750"
+    Uv = mact? or kact "0,0,0,0,1158,630,0;0,0,0,0,1158,630,0;0,-1,0,0,1227,-1,0;"
+    b0 = AES key? "E0AF447FE96E64308D98E7254D83485B"
+    c0 = array of AES? [
+        "268F5501D2F79216EE75F40D367D54C31646069031960YOzNKdrDaU",
+        "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul"
+    ]
+    dH = webgl info? ",0,object;8,5,1,Google Inc. (Apple),ANGLE (Apple, Apple M1, OpenGL 4.1 Metal - 76.3);8,5,1"
+    fZ = canvas? "2;3486769;4601668;28,746671,0,1,21;9Q>P{ <jm[#<-i_RG/rSBb,$$atpN]_|(2-4$vAwqu=gP><w|hmI=L.43l(.{$5LKep&[r3svu^wlMXL@JH&wE 8+kV1.D>wk9HZJM-ppsUx}kXfjnsCZ%fr)d1@2SZ~8Ql(-3mA^gSy+ftk&)<v#W6LiI4?$On8Iy,@PUC!<J1hxk%z=9HDH%a!C%w#wHj2M):KlseRu# JbNi}>:SHV9%T^[ZZoSK(B(9<P=umj?wlD8Uh&.`YaM?j/us*Do,u4vDq}:-~BvdTvk>Jw~KVeRGdE>.Xm8aYul=[wCG;c)5w39h!_f=V]EAu[UJh2j?oM4Ufi>K^*VHYX}Ne.}f+_IJM#)3ATPiWzJ]2M1X)1Q i1r CgD6d1*DDsBh81SzE6ABf;)3>.XKC-/pyc,r}t)+{AK`jQmAyu.zNh04Y;AD;lR%5J#)&`<k5@uXvsc>jM`5in8h:y_8pO%.[FMHfW5E4`|awrHhW0e3L@%0{:IjymwNzVKZTLwwJqxIHk4yWIvi{N~fX;o!$[q ,`@kV+ycK^7|5iRF{C>=S,x?nxouTQj^TLy3w}!u^bn(b4]5.c3{J5hb~3]Co!MN+SLh2<j2A|vMBa-wvAUo 6ChG[]VDMD92]+Q!0tn&uK[4i(,,DWwoJfm4;`GateI,0jFW1|K@U~Mcw:6o^O3YYG9^i61h/&%:Nh~0G?t|j%qiEz-#kXCy|s{};+aV+|QH6:jocedC !lQ`#AGTZi4!$dH&4l3fq+}c|2GV 7ssT`if`RNkmBV~{7;as;UU:!(,`{Wi]c1H%ok59:/Qj_Du<qNy0KMXqW,jc{Ckd_oZ4O$x4_N2tbkb)cssqtPD1C? 8Ij(dyMs{j9L.ZIta0l1U_Q!UPY{yWhIf1M``P-gux6R8lX<5PJ`%27sOOWq{f)_yRc)#5oJVW,N9glFJtg+N[ N(C7l|Z%j9j/NYiA2/=rF2htBT;tH=(5#mt|XqE$e/m?hq,cUaa!aWXYKF9$Z4A^M5?U!_8sQ/+C|D+(r4G%gc;R,D+~V?Jx`Te h6{U=qqBu0E;|J~M9Jv r#mzG?Xo~a]!R&)yuYG|r#@7,]uu^OMqA^VYG2T$%nD]H}iMI*#SE^]jY<.zPcdq},2.*iOlucBaR*$ln[gB.elO!_$jgvm57INmNMzXPf6UM2-w.tzWT}Lag9molir5Eos#~yR9>C!KO-+-5y=soH!~H}NOMq!7R}(<,@ [r$_*7{,352@:.XMXfN6?3W_0Mw.ELO0m0A+vrVjLg]B05pMv)vXin9?v5s$PXOO4LzS/85KJsv(.4oS*C5}3<W*_dUl@E^E:k)aP`cx-TK}v)hcyR6.OR/E$H+X+9U>:c3{kzoO] ;RZjVLzSG=Zl>iBkU$au9;0T))w02ap@W!4D@9d53>ZdUxgB|N.H`q*Ez5d/,h/XwD`ytmJ)/|IkOzmN5qM^C5G}X[T%:k*h}_x0BQ _+c/U@zpU>th+V`zP-@5s*g,c/_%LO[A1.8uB9gsH?!q>k$<{YjwPbHun3sMRer_8Yk7wjUWE5}z4{0L7 *M!D-[Ho[yd|(r|i*pMM,(x|aZ-(2XS7OhLlYPrYJ[OZ#pf+G%gWR[SjMK{t@=*+8|>g`/^pg5aZlc[4)qcTqyq5!#s8d.{K>M?}l&uUO+j#_XS!7<t0 A>KNM:.S2.%R$^MBt7k !mBq*2g?9x0).Mao{if1XsvJi^B5 2~#a[Ceg4<w#l+}HNzy(}uW;;I|Y@43.5%)~xN|0ArOPI:P#+T~:1tT<`B0__P^NibvZ_)k{=j^)]*9~9gq?3G~d}3nTMIXZvy$l)a@Z{e4NL}=]xDZ.47!{-P9k|o0<LUuloT<R{oPbFp,d}mQoz7.p3m7~78F`~+HJS?&W(sa<$HvItIwRTiZV)V8;@Ii#FHt&!*qEfeSp{g&uA&7{5]UFmM9-@ez6~j7?iLEhY1.NVOGt=4a?[&|p^}-xDBi)j5Rk&ysF20;ZtV-{NHqUzDJD(cZ[}>a8X1Zd:5;rQff9TAuoM@ _zT]nE(.>]xR!Z)Q|>QV&r.2f8)PUR8w~ `g+bPWe3O.[;rN|AGYI|@J:hQ$<y{]M,^p:ren,_%h(uJ.V%HcD,,G%HA1%6,*fB:{oPHhyP/{YR-tNv)N>6Yt]=%v&|$noQDRqjm%FtP=}|BKq]l9x!Hg]<D,>=TE7-u@Y^Wq: UJ/1ps=$>hek2[F191MHgnoJ[g@-?x+tu?05~xNF[=BDo89s<,RPjk+kV4mkyGs]9I04(2w`)QciFzmu;2[dZj>WV&X3FkG8}+%(t5ihKq~OeBA>aR37c_*(*f=Ze:wh_a`jx%ol6y&D/Yv^*5a Hcx $kHbwH1&|4>TJZQZ3W5I7u|(Sb@K|8i_q]CkucLSKXg)qE*Bup+;At2EX-V _uFDW=;W~cSYbs}ONknk]So9/}(Ez.}2t3a{;%mMkSGN^r:]o50I5/T)up%>t>xG8W2BbXUuXF&VQz;v MMlWO)`TBp*e.zS7i7_~~#_0y|7Fl4h4Zn|p{V/1&PpN%o=@eJs2BDyTVSn+duawU`& $k>NP A@t`6WEtH|H`;F{(G4n>y_G1d32J-hxuy_imzp{FkH~cFdA?B(jA|V0E|+9}bHTg:%A5SU: b5=RQ>KSxR+kN+k0cd,q^*5xFI,0)wqg<{,Y:1OZ4_b. h*`;LjUQq/lMS)I1biqR B+!%6W;`Q9}l`+kyI;1^{kGSCV>YIK?%Dsje6?9aP78#mG/Hthv4eQCIIPHfccZ@f=RHoFl?7mG~zTDh<67k42!*)LE_gq_d+kfm8XT;+y*~z^ZtJZN5ddRnb,<Sdjqb;~-4j$*krludkbV|U_q[+(}FAk{ROe cAq4?xJN9BIPJTE>~[e}hF>Ddm4Hv:KMK-{?Q*[VUfj%x1%,cKStkOJ]x7evZ[0*Bvf$F&et^ =@O&Ug>(SaT:^d,Dt9k&TYr_Pr9 bxn&@akw~6zs(IQ.CK%Q.T*@ .O+&J!tRbn5Cpo<AR=<b2|s6N}?2S8a:JWb`%R>F [)ThSJO-69%0Y|w*e,vMXv kEwX#Rd14K}Mgm)n%i9Pxz$JeLre4%WAZ}{3_JLC]gRqFd7Wrm|K#.=j~xA<%mD8f!-bsUQf6AxZxF{d.CtV,,Y[%qFXkE)}<u)5~^+X%;}H#r]zFGRhfn,gG0vg~gp&]3Cw1*=jj3GN[<( ,;r>x%cmH>#thsEW5/VihA`wEj~NRvjvQr#ei,=3^aOZOZJ8|fn?:1I^Iwi;<sf3 &HAF_1h[[MJ^_XW4.Krmh4F2i]<={sC/QrkfFgJ/G=6QX__E?]5+;]~r<@-7toK/f3%5c1(h{#4B[Q_M^!HoJ+KC~*nybe=2i2::)IH7JSm#9:QBDvWdbKigSKDMII73B78L)o^RqvD`$.0=7zZZnI%q[si{$$ wGv/I%dqh33brPTqzsSCYpU)~}+$8;MCH&f--(fyn@L{=dvCA[E/Fc;(%~DDcSup|U<j{f0nkt[4E(Iqx~pn#F^IYxswei[ci pb,E>{W,z. Y%PfM27$Ln_riYHkJ=F$p),,{i/Eu9-N4P-<iKW{I98MNz.in:D_KNn8DHe|U|r>#N*Gffa7rt^~-IsEV30PEW}YXV$F|W7uc;*1iiyT&|#C]$Lz<e!HHY*fiuLiN#qGL&g U]jN|52_uKlQvMh058$elkQ}[H-#(Z?11FRK&8BX+a<hB{Dpl#^Qc^z1rN[58ylBv.;5z$@b*a>#[AkFJ_Q)Wl@zveOUP81bE]znYu|W#zS?{w(Tp.)u7H$grH^TeFO$x-J@9TeIxmB7 T4u4M.Bb gOQL]LZOV2%>ni^}=%b[..jnA*Jae_*K@)0*;;CHU8$P%wyIlS:/i#YR3t<obz<{eI^`z-5;=0@^/I5f3vYYMD63%t8l}vC (r%1KZjl*xvO4(Ap>9#(o%iwX^{][wc/-G3@m%MNgVd-v$6u<M71:::H5?iJW[P616Pc~5dv(9<zdp}b9A;JPX]khcGv>O1#x!Ji*Q|1R]j{h,i[c@-Iw9qVzLfL:)#^mtBi/~1Niwaw=2L,}/X>|:v^)kOn0!NkEX/M,?1Mz~83+7vdPXj$:Wh)3?..Ognq#41,c5xKl.IE<o+6 ;A[uG[(%?7/Y!%.P_>gPvc<d3V@;tEC9ZhCE!2_|*/5a92:]&c2wI4iEn47@|YUJr UrTkB`~q|R1;Co9yP?{pG.Y ~4kBOS&=r.vMo3nJe;%3Lx:!`XF9hd%fqyb?KX{G|G.[6Y-/9}k$-f4&flJM6yL4AW=,2Hu>xO7re}PveRGRdY,pj_WR@?tOixvfv1k$eO;lO(Xj$~^:E4bnSSKW<Ju]zJ3+?Y>rY5}pT-`v:A2]qhHB1G6Eot{0XMVP{2o=:ooXO|b&GPDq;}jme{x*|0|a>Rbc0T9mhOSB:fe}DKIz?G8B8tLuhz[Q9dcn1fH+)&ymxN2n?HD JLBQNos;:RD:oN_U3`e<H2<:;+vK&19h@I>_`5FP>X+xP;OU-k`DVNeOR&&W3^90l|%]cC*V]|oO.nw2{TRFZPde%W/wTu<v$78Vd<Ns;[auM;QkX<D9OPfj%~$ZJe#iYhg0X0<.<fu1mU|4$j{z/0TY+t4wa}8<}=Ly=s. /u~9yt7dX9TDx#ARy}.vi2ZPB_rDl1c+,Rj- qKgmcgjHU$B_lyri/bl_w7r&/C?_JZ(rsR*xv&2n*Su9Ef^b(aYc&B4^JudAu4gfnD(vy;EpHu6ewB0B{TZ]6VBk`D*bEkCCK-jjm5R(N2E*7uwf^9LJ/KAdyiW9&/[-pF,3[/@*EBcHa(:B1k.7a;.ntRZ2!L59[E{8<r7$Y1kK}CRnYBTkHw{cYLF8:jD]oj oz[vld,e}oV1Lea >#(KDB6lf0rz?a&o9KX%n#DU7vG@`$|:Zu-_!]|*~X9~yj+*GsI)zZH:0YBe*-x;kUHe=Rq^_bQHd20+izr=C{+jl?xPr v@QP&f]q~?>J.#E*77g}rVRBC9/na5_Kg=hd[xf/BIci`U2#x+lvj``SSXWB<WB=N,JkVokJJu{145bCV[<os[XQfcgWO3bt0cEHKxrJyu7O<V,o)@)GPIIWirucpL.<O0~C*U%(V)1b[^A2M_Q+5#6MWejkpb;Wg_FO[|B!Gr|SNvYQs3q`aYz-L@}DK)!@r;DU(NvcX2KyLj^T{K=#(.TS,.YRbRHj0%z;WzP(H3M.=h[Lazl0FGq)O_18F>5^>&%KOAWL$`7g{A:?mM;>K]$:r>Xj }pL%/$R^S.kBKJ8Y&.$b/B6Ve*S-S.-XJY3g{sKeG fV@ h|NRgOz}C<[/^E]9Nw}zk<JS3WMqoT?2{?v|0cU]m$7a0m9C[ <`/y=,h42[XD@+x720]E+=Xc(zF*YLf3BZG1IYAscPJC9- P.MfW@SsGaS#|?>[7MWY?aojB7/.-wqeM0NkfOm,W+#`N+yF,E]MCzIzf%IRMoM`A~Kkbb~>$UA( ^[/l#JNSw>0d|nw,5~:~q!]Ve%A-a^?M #WFn:L7kV,~-%<6`YYNCs@DC&?,kma^UG#*Flp&R4~rt(GOfp*oyS|+Ta-#`iZjiiE=ZBNS2drj{%9[!x5?8_HVdEthSccl`wRW)`p#_CCBdsCA 4?EM,`|9uPC@<AScm[ZB!8C/y6~<u!@iv9GW<%BP6o~q..@CSaUE/@^H6AGk%W OgVrrx6HpV>G9]e}*<DL=yGfMANd9W3O3I}%G0+GvdHTa 4N`),9}n,]QUpvInMm_|_`.wsGocYpk,Hu$Nitdp~QBLe&Y~k?~74<h_c7^[Glr<Y2I|&>49b=G@T|b+rO;bJ|=;Rh?IJfy9k2b(HrWjUk zMwL/6GKuf-L^iH(~~?fHe@%5Nnk~]FNO%K=uuDF9jA&k*iTX](J5U1 *Q~*?$`o,Z$vIZS5!%3k|Czq (]xe#qC+Gs*Cy|&I|VV 4}|qQ2n+S8z*G @5bX!n8p.6+r<a<rhOha[IerduC2zNS.TV1xfKxKw6.uCQG ,u-p4&{`Ik$.)HXCvhGL-(R:C wR@VO1;29?RJV9}>x{mG^Doua^D2xg+PMM$Cyis8GMfke`F}H]T!O8vr^mZY3|Gxy+[/$r+&HRpn6vvM!&1j/*ot^iTiL7Z;PV(kdfo!<Ln|4+,ZFUe3reOVK[KcM@kSWkQAB<N^(8fq;5:kRk#c41 0:IHQ:?|Py9}ZzR)4i{?`-!3vak<zUPOis~0]./zap,#f&~KZ?U&?jz&r]#=&jmqz8TYvu!^@5uWMDHP|YxB7s<3/:f(6zyx>U~xCGQ>>c+ o~-*sJnXofG$p7Jx5Ogi*S%Ahs(xa5mUVw4q8)R.O<btv4=epayyJe4W 3P@8n<DGf-Z4wL7kDs4;;s<HQ`u@l8O39^h]-ww!EhQxvT?uQ}GMP7n sI]+I-S-Snfwa3?`jF$dhB-pV%SizY3A@y1n+{JOzFzxaD__:f^:7&k_KvYh~U1xKh7N!D(d CyHKxHbX}|phKP4-`HZynKsjHsb0*U=n;VjXDn,i=>**{!tl35;oaMi~]|rOK-l3}3YE-]}kN=6C>S,>zc0GCGh%V:}fQB=aEb1x&JjYFAGQKUXfD0Z03{InS2$kgIB(p,VPZ)WE4D-Ygug9[W#E]S1RG$ydoX[9.L&&#[.*!y3EYhk%Zn7y~+Z)xOjScASA;^/;HxLYN]h&?ahz}v[46I!"
+    h6 = random seed 3 "5d46e782775916804ffc6ea60cfa44fb08a21a9cddbc005eb9996c50f34ea1a4"
+    kv = array of keys and E0 values = [268F5501D2F79216EE75F40D367D54C3YOzNKdrDaU: "0.c7030f8ed3a2a,0.6e08396a9423c,0.0e48f077219c9,0.13bae1000a42e,0.38218e088aefb,0.860ec081f2dc3,0.e7a1940fafb63,0.2060b06deecf6,0.e04840ed4e76d,0.14097fd8e09f3;0,1,1,1,0,0,0,0,0,0;0,3,0,4,3,0,1,5,5,2;268F5501D2F79216EE75F40D367D54C3,1646069031960,YOzNKdrDaU,268F5501D2F79216EE75F40D367D54C31646069031960YOzNKdrDaU,1,1,0.c7030f8ed3a2a,268F5501D2F79216EE75F40D367D54C31646069031960YOzNKdrDaU10.c7030f8ed3a2a,210,214,61,205,191,157,197,104,214,41,231,242,90,121,4,120,10,154,160,213,12,224,64,23,55,113,216,173,119,129,95,158,748083,0,1646069780101;"
+    E0AF447FE96E64308D98E7254D83485BzXRBbJPsul: "0.4470cf334b729,
+    ]
+    n0 = array of keys possiblt with other info 
     [
-        79,
-        219,
-        81,
-        214,
+        "E0AF447FE96E64308D98E7254D83485B",
+        1646069031960,
+        "zXRBbJPsul",
+        "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul",
+        "1",
+        "1",
+        "0.4470cf334b729",
+        "E0AF447FE96E64308D98E7254D83485B1646069031960zXRBbJPsul10.4470cf334b729",
+        [
+            79,
+            219,
+            81,
+            214,
+            0,
+            115,
+            117,
+            144,
+            185,
+            94,
+            54,
+            201,
+            31,
+            182,
+            69,
+            91,
+            223,
+            250,
+            111,
+            136,
+            135,
+            9,
+            134,
+            249,
+            14,
+            145,
+            179,
+            198,
+            212,
+            131,
+            0,
+            128
+        ],
+        829470,
         0,
-        115,
-        117,
-        144,
-        185,
-        94,
-        54,
-        201,
-        31,
-        182,
-        69,
-        91,
-        223,
-        250,
-        111,
-        136,
-        135,
-        9,
-        134,
-        249,
-        14,
-        145,
-        179,
-        198,
-        212,
-        131,
-        0,
-        128
-    ],
-    829470,
-    0,
-    1646069861486
-]
-ps = location of akamai script
-x0 = end of key at v0
-xg = mact? "0,4,722142,394,19,-1;1,4,739610,373,19,1095;2,4,746656,372,23,1095;3,1,746676,372,22;4,1,747295,494,107;5,1,747302,497,115;6,1,747386,499,161;7,1,747417,497,163;8,1,747422,496,163;9,1,747425,496,163;10,1,747436,495,163;11,1,747513,496,163;12,1,747514,500,163;13,1,747523,506,163;14,1,747527,513,165;15,1,747538,531,171;16,1,747544,547,178;17,1,747551,566,186;18,1,747559,577,192;19,1,747569,610,207;20,1,747573,633,217;21,1,754266,647,274;22,1,754267,647,274;23,1,754271,644,265;24,1,754280,631,235;25,1,754287,616,206;26,1,754350,596,165;27,1,754364,524,31;28,1,754365,512,7;29,1,754370,511,4;30,1,754579,536,1;31,1,754580,536,1;32,1,754587,538,4;33,1,754595,539,8;34,1,754602,541,12;35,1,754610,543,17;36,1,754619,544,22;37,1,754626,547,26;38,1,754637,549,30;39,1,754642,549,32;40,1,754653,553,38;41,1,754658,554,40;42,1,754671,556,43;43,1,754673,558,46;44,1,754681,560,48;45,1,754690,561,50;46,1,754697,564,52;47,1,754705,566,53;48,1,754713,567,54;49,1,754720,568,55;50,1,754729,569,56;51,1,754736,570,56;52,1,754755,570,57;53,1,754760,571,57;54,1,754769,572,57;55,1,754776,573,57;56,1,754787,575,57;57,1,754792,577,56;58,1,754799,581,55;59,1,754808,588,54;60,1,754824,603,54;61,1,754831,614,54;62,1,754838,626,54;63,1,783506,646,47;64,1,783507,646,47;65,1,783513,612,47;66,1,783526,596,47;67,1,783529,570,48;68,1,783536,561,49;69,1,783544,545,49;70,1,783553,541,49;71,1,783560,532,50;72,1,783569,526,51;73,1,783576,523,51;74,1,783586,520,51;75,1,783591,519,51;76,1,783603,518,51;77,1,783607,518,52;78,1,783623,518,52;79,1,783639,518,52;80,1,783647,517,52;81,1,783655,517,52;82,1,783662,517,53;83,1,783671,517,53;84,1,783679,517,53;85,1,783688,517,54;86,1,783695,516,56;87,1,783703,516,57;88,1,783711,516,58;89,1,783721,516,60;90,1,783726,516,61;91,1,783737,516,61;92,1,783742,516,62;93,1,783754,516,62;94,1,783757,516,63;95,1,783845,516,63;96,1,783853,516,62;97,1,783860,516,62;98,1,783869,516,62;99,1,783891,516,61;100,1,783892,516,60;101,1,783902,516,60;102,1,783907,516,60;174,3,787310,529,69,-1;175,4,787454,529,69,-1;176,2,787454,529,69,-1;259,3,828729,570,68,-1;260,4,828924,570,68,-1;261,2,828924,570,68,-1;327,3,829787,613,214,-1;328,4,829922,613,214,-1;329,2,829923,613,214,-1;470,3,831961,355,123,-1;472,4,832054,355,124,-1;473,2,832054,355,124,-1;501,3,832538,306,120,-1;503,4,832637,305,120,-1;504,2,832637,305,120,-1;525,3,833088,220,121,630;526,4,833204,220,121,630;527,2,833204,220,121,630;711,3,852389,538,44,-1;713,4,852505,537,44,-1;714,2,852505,537,44,-1;768,3,859205,514,19,-1;770,4,859287,514,19,-1;771,2,859287,514,19,-1;870,3,1180373,525,69,-1;871,4,1180541,525,69,-1;872,2,1180541,525,69,-1;957,3,1183457,447,80,-1;959,4,1183586,447,80,-1;960,2,1183586,447,80,-1;"
+        1646069861486
+    ]
+    ps = location of akamai script
+    x0 = end of key at v0
+    xg = mact? "0,4,722142,394,19,-1;1,4,739610,373,19,1095;2,4,746656,372,23,1095;3,1,746676,372,22;4,1,747295,494,107;5,1,747302,497,115;6,1,747386,499,161;7,1,747417,497,163;8,1,747422,496,163;9,1,747425,496,163;10,1,747436,495,163;11,1,747513,496,163;12,1,747514,500,163;13,1,747523,506,163;14,1,747527,513,165;15,1,747538,531,171;16,1,747544,547,178;17,1,747551,566,186;18,1,747559,577,192;19,1,747569,610,207;20,1,747573,633,217;21,1,754266,647,274;22,1,754267,647,274;23,1,754271,644,265;24,1,754280,631,235;25,1,754287,616,206;26,1,754350,596,165;27,1,754364,524,31;28,1,754365,512,7;29,1,754370,511,4;30,1,754579,536,1;31,1,754580,536,1;32,1,754587,538,4;33,1,754595,539,8;34,1,754602,541,12;35,1,754610,543,17;36,1,754619,544,22;37,1,754626,547,26;38,1,754637,549,30;39,1,754642,549,32;40,1,754653,553,38;41,1,754658,554,40;42,1,754671,556,43;43,1,754673,558,46;44,1,754681,560,48;45,1,754690,561,50;46,1,754697,564,52;47,1,754705,566,53;48,1,754713,567,54;49,1,754720,568,55;50,1,754729,569,56;51,1,754736,570,56;52,1,754755,570,57;53,1,754760,571,57;54,1,754769,572,57;55,1,754776,573,57;56,1,754787,575,57;57,1,754792,577,56;58,1,754799,581,55;59,1,754808,588,54;60,1,754824,603,54;61,1,754831,614,54;62,1,754838,626,54;63,1,783506,646,47;64,1,783507,646,47;65,1,783513,612,47;66,1,783526,596,47;67,1,783529,570,48;68,1,783536,561,49;69,1,783544,545,49;70,1,783553,541,49;71,1,783560,532,50;72,1,783569,526,51;73,1,783576,523,51;74,1,783586,520,51;75,1,783591,519,51;76,1,783603,518,51;77,1,783607,518,52;78,1,783623,518,52;79,1,783639,518,52;80,1,783647,517,52;81,1,783655,517,52;82,1,783662,517,53;83,1,783671,517,53;84,1,783679,517,53;85,1,783688,517,54;86,1,783695,516,56;87,1,783703,516,57;88,1,783711,516,58;89,1,783721,516,60;90,1,783726,516,61;91,1,783737,516,61;92,1,783742,516,62;93,1,783754,516,62;94,1,783757,516,63;95,1,783845,516,63;96,1,783853,516,62;97,1,783860,516,62;98,1,783869,516,62;99,1,783891,516,61;100,1,783892,516,60;101,1,783902,516,60;102,1,783907,516,60;174,3,787310,529,69,-1;175,4,787454,529,69,-1;176,2,787454,529,69,-1;259,3,828729,570,68,-1;260,4,828924,570,68,-1;261,2,828924,570,68,-1;327,3,829787,613,214,-1;328,4,829922,613,214,-1;329,2,829923,613,214,-1;470,3,831961,355,123,-1;472,4,832054,355,124,-1;473,2,832054,355,124,-1;501,3,832538,306,120,-1;503,4,832637,305,120,-1;504,2,832637,305,120,-1;525,3,833088,220,121,630;526,4,833204,220,121,630;527,2,833204,220,121,630;711,3,852389,538,44,-1;713,4,852505,537,44,-1;714,2,852505,537,44,-1;768,3,859205,514,19,-1;770,4,859287,514,19,-1;771,2,859287,514,19,-1;870,3,1180373,525,69,-1;871,4,1180541,525,69,-1;872,2,1180541,525,69,-1;957,3,1183457,447,80,-1;959,4,1183586,447,80,-1;960,2,1183586,447,80,-1;"
+    A0() returns time
+    fZ returns obfuscated
