@@ -528,7 +528,7 @@ gd: function() {
     var difference = bmak.diff_dates();
     var cookie_exists = 2;
     var beginning = bmak.gd();
-    var form_info = "0,-1,0,0,1498,-1,0;0,-1,0,1,2588,1468,0;0,-1,0,1,-1,1500,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,-1,1684,0;0,-1,0,1,2563,-1,0;";
+    var form_info = "0,-1,0,0,1498,-1,0;0,-1,0,1,2588,1468,0;0,-1,0,1,1500,1500,0;0,-1,0,1,1684,1684,0;0,-1,0,1,1684,1684,0;0,-1,0,1,1684,1684,0;0,-1,0,1,2563,-1,0;";
     var home_url = "https://www.fedex.com/global/choose-location.html";
     var aj_type = 1;
     var total_calls = 0;
