@@ -1,3 +1,5 @@
+setTimeout(async()=>console.log(
+    await window.navigator.clipboard.readText()), 3000)
 window.onload = function() {
     var canvas = document.createElement("canvas");
     canvas.id = "h"
